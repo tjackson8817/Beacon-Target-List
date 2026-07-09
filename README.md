@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/29846988/README.md)
+[README.md](https://github.com/user-attachments/files/29850620/README.md)
 # Beacon — OT Career Target-List Builder
 
 Builds an expanded target-company list for OT cybersecurity consulting/
@@ -122,6 +122,18 @@ stable attribute like HQ location.
 
 ## Known limitations
 
+- **SEC EDGAR's SIC-code company search appears unreliable as implemented.**
+  Real testing has shown it returning zero results even for large,
+  well-populated SIC codes (e.g. 8742, Management Consulting), which is a
+  stronger signal than "these industries have no filers" — more likely
+  this specific legacy `cgi-bin/browse-edgar` endpoint doesn't behave the
+  way older documentation describes anymore. Until this is root-caused,
+  **"Skip AI enrichment" (quick/free mode) may return few or zero
+  companies**, since it depends entirely on this endpoint. Running with AI
+  enrichment enabled (the default, unchecked) doesn't have this problem,
+  since company discovery there comes from Claude's web search, not this
+  endpoint — that's the more reliable path right now, even though it costs
+  more per run.
 - The NAICS→SIC crosswalk table in `scripts/build_target_list.py` covers
   only the codes most relevant to OT cyber consulting out of the box;
   other codes fall back to asking Claude for the mapping, which is not as
@@ -130,10 +142,6 @@ stable attribute like HQ location.
   is realistically going to be private companies, which is where the AI
   research step (not a verified database) has to carry more weight — treat
   those rows as a strong starting point, not verified fact.
-- I couldn't test the live SEC EDGAR calls from my own environment before
-  handing this off — same situation as Fenceline's CISA feed. Run it once
-  and check the Action's log; if EDGAR's response format has changed or a
-  request gets blocked, the log will show where.
 - The sample list included (`sample-ot-cyber-consulting-advisory-firms.json`)
   is built from real companies and real facts already present in your
   original workbook, reformatted into this schema — it's not a live pipeline
