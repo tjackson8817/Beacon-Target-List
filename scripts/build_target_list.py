@@ -49,7 +49,7 @@ SEC_HEADERS = {"User-Agent": "OT-Cyber-Target-List-Builder research-tool@example
 # consulting/advisory. Not exhaustive — codes outside this table fall back
 # to asking Claude for the mapping.
 NAICS_TO_SIC = {
-    "541512": ["7379", "7371"],   # Computer Systems Design Services
+    "541512": ["7371"],           # Computer Systems Design Services
     "541611": ["8742"],           # Admin/General Management Consulting
     "541618": ["8742"],           # Other Management Consulting
     "541690": ["8742", "8711"],   # Other Scientific/Technical Consulting
@@ -209,7 +209,7 @@ def edgar_companies_by_sic(sic_code, limit=20):
         resp = requests.get(
             "https://www.sec.gov/cgi-bin/browse-edgar",
             params={
-                "action": "getcompany", "SIC": sic_code, "type": "10-K",
+                "action": "getcompany", "SIC": sic_code,
                 "dateb": "", "owner": "include", "count": limit, "output": "atom",
             },
             headers=SEC_HEADERS, timeout=20,
@@ -217,7 +217,16 @@ def edgar_companies_by_sic(sic_code, limit=20):
         resp.raise_for_status()
         root = ET.fromstring(resp.content)
         ns = {"atom": "http://www.w3.org/2005/Atom"}
-        for entry in root.findall(".//atom:entry", ns):
+        entries = root.findall(".//atom:entry", ns)
+
+        if not entries:
+            # Don't fail silently — log status + a snippet of the actual response
+            # so a future zero-results run is diagnosable instead of a guessing game.
+            snippet = resp.text[:500].replace("\n", " ")
+            print(f"  [debug] SIC {sic_code}: HTTP {resp.status_code}, 0 atom entries found. "
+                  f"Response started with: {snippet!r}", file=sys.stderr)
+
+        for entry in entries:
             title_el = entry.find("atom:title", ns)
             title = title_el.text.strip() if title_el is not None and title_el.text else ""
             if not title:
