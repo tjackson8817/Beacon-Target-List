@@ -209,7 +209,7 @@ def edgar_companies_by_sic(sic_code, limit=20):
         resp = requests.get(
             "https://www.sec.gov/cgi-bin/browse-edgar",
             params={
-                "action": "getcompany", "SIC": sic_code,
+                "action": "getcompany", "company": "", "SIC": sic_code,
                 "dateb": "", "owner": "include", "count": limit, "output": "atom",
             },
             headers=SEC_HEADERS, timeout=20,
@@ -314,15 +314,40 @@ def expand_naics(seed_company, seed_website, seed_naics, industry_keywords):
 
 
 def discover_via_ai(naics_codes, keywords, geography, exclude_names, count):
-    user_content = (
-        f"NAICS codes: {', '.join(naics_codes)}\n"
-        f"Keywords: {keywords or '(none)'}\n"
-        f"Geography: {geography or 'United States'}\n"
-        f"Already found (exclude these): {', '.join(exclude_names) if exclude_names else '(none)'}\n\n"
-        f"Identify up to {count} additional real companies matching these criteria."
-    )
-    result = call_claude(SYSTEM_DISCOVERY, user_content, max_tokens=3000)
-    return result if isinstance(result, list) else []
+    """Batched to avoid asking for too much in one call — a single request
+    for 25 companies plus web searches can exhaust the token budget before
+    the model writes any final answer at all. Each batch's failure is
+    isolated so one bad call doesn't take down the whole run."""
+    found = []
+    batch_target = 8
+    excluded_so_far = list(exclude_names)
+    remaining = count
+
+    while remaining > 0:
+        this_batch_count = min(batch_target, remaining)
+        user_content = (
+            f"NAICS codes: {', '.join(naics_codes)}\n"
+            f"Keywords: {keywords or '(none)'}\n"
+            f"Geography: {geography or 'United States'}\n"
+            f"Already found (exclude these): {', '.join(excluded_so_far) if excluded_so_far else '(none)'}\n\n"
+            f"Identify up to {this_batch_count} additional real companies matching these criteria."
+        )
+        try:
+            result = call_claude(SYSTEM_DISCOVERY, user_content, max_tokens=6000)
+        except Exception as exc:
+            print(f"AI discovery batch failed (requested {this_batch_count}): {exc}", file=sys.stderr)
+            break  # stop trying more batches rather than looping on a repeat failure
+
+        batch_found = result if isinstance(result, list) else []
+        if not batch_found:
+            print("AI discovery batch returned no companies; stopping further discovery attempts.", file=sys.stderr)
+            break
+
+        found.extend(batch_found)
+        excluded_so_far.extend(c.get("company", "") for c in batch_found if c.get("company"))
+        remaining -= len(batch_found)
+
+    return found
 
 
 def enrich_batch(companies_batch, context_naics, context_keywords):
@@ -544,7 +569,11 @@ def main():
         if remaining_slots > 0:
             print(f"Step 3: AI-assisted discovery for {remaining_slots} more companies...")
             exclude = [c["company"] for c in edgar_found]
-            ai_found = discover_via_ai(all_codes, industry_keywords, geography, exclude, remaining_slots)
+            try:
+                ai_found = discover_via_ai(all_codes, industry_keywords, geography, exclude, remaining_slots)
+            except Exception as exc:
+                print(f"AI discovery failed entirely: {exc}. Continuing with EDGAR-only results.", file=sys.stderr)
+                ai_found = []
             ai_found = [{"company": c.get("company", ""), "cik": None, "source": "AI research (verify)",
                          **c} for c in ai_found if c.get("company")]
 
