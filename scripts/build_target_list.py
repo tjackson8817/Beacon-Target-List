@@ -246,9 +246,38 @@ def dedupe_companies(companies):
     return out
 
 
+def normalize_naics_result(result, seed_naics):
+    """The model is asked for a specific {primary_naics, secondary_naics,
+    rationale} object, but LLM output shape isn't 100% guaranteed. Normalize
+    whatever comes back rather than trusting it blindly and crashing."""
+    fallback_primary = [{"code": c.strip(), "description": ""} for c in seed_naics.split(",") if c.strip()] \
+        if seed_naics else [{"code": c, "description": ""} for c in DEFAULT_SEED_NAICS]
+
+    if isinstance(result, dict) and "primary_naics" in result:
+        result.setdefault("secondary_naics", [])
+        result.setdefault("rationale", "")
+        return result
+
+    if isinstance(result, list):
+        # Sometimes the model wraps the object in a one-item list.
+        if len(result) == 1 and isinstance(result[0], dict) and "primary_naics" in result[0]:
+            item = result[0]
+            item.setdefault("secondary_naics", [])
+            item.setdefault("rationale", "")
+            return item
+        # Otherwise it may have returned a bare list of NAICS entries.
+        if all(isinstance(item, dict) and "code" in item for item in result):
+            print("NAICS expansion returned a bare list instead of the expected object; "
+                  "treating it as primary_naics and falling back to defaults for the rest.", file=sys.stderr)
+            return {"primary_naics": result, "secondary_naics": [], "rationale": ""}
+
+    print(f"NAICS expansion returned an unexpected shape ({type(result).__name__}); "
+          f"falling back to seed/default NAICS codes.", file=sys.stderr)
+    return {"primary_naics": fallback_primary, "secondary_naics": [], "rationale": ""}
+
+
 def expand_naics(seed_company, seed_website, seed_naics, industry_keywords):
     if seed_naics:
-        primary = [{"code": c.strip(), "description": ""} for c in seed_naics.split(",") if c.strip()]
         user_content = (
             f"Seed company: {seed_company or '(not specified)'}\n"
             f"Seed website: {seed_website or '(not specified)'}\n"
@@ -267,7 +296,12 @@ def expand_naics(seed_company, seed_website, seed_naics, industry_keywords):
             f"secondary/tertiary related NAICS codes (competitors, suppliers, manufacturers served, "
             f"adjacent service providers) relevant for an OT cybersecurity consulting/advisory job search."
         )
-    return call_claude(SYSTEM_NAICS_EXPANSION, user_content, max_tokens=2000)
+    try:
+        result = call_claude(SYSTEM_NAICS_EXPANSION, user_content, max_tokens=2000)
+    except Exception as exc:
+        print(f"NAICS expansion call failed entirely: {exc}. Falling back to seed/default codes.", file=sys.stderr)
+        result = None
+    return normalize_naics_result(result, seed_naics)
 
 
 def discover_via_ai(naics_codes, keywords, geography, exclude_names, count):
