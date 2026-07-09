@@ -1,0 +1,86 @@
+{
+  "list_name": "OT ICS",
+  "seed_company": "Accenture",
+  "seed_website": "accenture.com",
+  "industry_keywords": "OT Cybersecurity",
+  "geography": "USA",
+  "primary_naics": [
+    {
+      "code": "541512",
+      "description": "Computer Systems Design Services"
+    },
+    {
+      "code": "541611",
+      "description": "Administrative Management and General Management Consulting Services"
+    },
+    {
+      "code": "541618",
+      "description": "Other Management Consulting Services"
+    }
+  ],
+  "secondary_naics": [
+    {
+      "code": "541519",
+      "description": "Other Computer Related Services",
+      "relationship": "Adjacent/overlapping code frequently used for cybersecurity consulting, managed security services (MSSP), and incident response \u2014 many OT/ICS security boutiques (and Accenture Security engagements) are classified here."
+    },
+    {
+      "code": "541513",
+      "description": "Computer Facilities Management Services",
+      "relationship": "Adjacent service line \u2014 covers outsourced management of client IT/OT systems and data processing facilities, relevant to Accenture's managed security operations work."
+    },
+    {
+      "code": "541690",
+      "description": "Other Scientific and Technical Consulting Services",
+      "relationship": "Adjacent advisory service \u2014 used by firms delivering OT/ICS risk, safety, and technical security consulting outside strict IT classification."
+    },
+    {
+      "code": "541330",
+      "description": "Engineering Services",
+      "relationship": "Adjacent/competitor overlap \u2014 engineering firms (e.g., process control/automation engineering houses) that design and secure industrial control systems, a core OT cybersecurity client base."
+    },
+    {
+      "code": "541511",
+      "description": "Custom Computer Programming Services",
+      "relationship": "Closely related code under which Accenture Federal Services is also classified; covers custom secure software/firmware development for OT environments."
+    },
+    {
+      "code": "561621",
+      "description": "Security Systems Services",
+      "relationship": "Adjacent physical/electronic security services provider category, sometimes bundled with OT/ICS security integration for industrial facilities."
+    },
+    {
+      "code": "334513",
+      "description": "Instruments and Related Products Manufacturing for Measuring, Displaying, and Controlling Industrial Process Variables",
+      "relationship": "Manufacturer served \u2014 makers of SCADA/DCS/PLC hardware (e.g., Honeywell, Emerson, Yokogawa) whose products Accenture's OT security practice must assess, harden, and integrate."
+    },
+    {
+      "code": "335314",
+      "description": "Relay and Industrial Control Manufacturing",
+      "relationship": "Manufacturer served \u2014 industrial control/relay equipment vendors (relevant to grid, manufacturing, and utility OT environments) that are clients or system suppliers in OT security engagements."
+    },
+    {
+      "code": "334290",
+      "description": "Other Communications Equipment Manufacturing",
+      "relationship": "Manufacturer served \u2014 includes industrial networking/communications gear used in ICS/SCADA architectures secured by OT cybersecurity teams."
+    },
+    {
+      "code": "221122",
+      "description": "Electric Power Distribution",
+      "relationship": "Key client/end-market sector \u2014 electric utilities are a primary target industry for OT cybersecurity consulting due to critical infrastructure regulation (NERC CIP)."
+    },
+    {
+      "code": "324110",
+      "description": "Petroleum Refineries",
+      "relationship": "Key client/end-market sector \u2014 oil & gas refining relies heavily on ICS/SCADA and is a major buyer of OT cybersecurity advisory services."
+    },
+    {
+      "code": "518210",
+      "description": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+      "relationship": "Adjacent/competitor \u2014 cloud and hosting providers whose infrastructure increasingly converges with OT environments (IT/OT convergence), also a common classification for cybersecurity software/services firms."
+    }
+  ],
+  "naics_rationale": "Accenture is classified across several overlapping NAICS codes depending on the reporting source: business-database aggregators most often list it under 541618 (Other Management Consulting Services), while ESG/industry profiles and Accenture Federal Services government contracting records use 541511 (Custom Computer Programming Services) and 541611 (Administrative Management and General Management Consulting Services). Because OT/ICS cybersecurity consulting sits at the intersection of technology integration and management advisory, 541512 (Computer Systems Design Services) is the most broadly cited primary code for cybersecurity consulting generally, since it is explicitly the code most cybersecurity firms self-select for consulting, integration, and advisory work. Secondary codes capture (1) closely adjacent IT/cyber service lines Accenture and its competitors (Deloitte, IBM, Booz Allen, Dragos, Claroty, Nozomi Networks) also use \u2014 541519, 541513, 541690, 541511, and 518210; (2) physical/industrial security overlap (561621); and (3) the manufacturer/end-client base that defines the OT cybersecurity target market \u2014 industrial control and instrumentation manufacturers (334513, 335314, 334290) and critical-infrastructure operators such as electric utilities (221122) and oil & gas refiners (324110), which are the principal buyers of OT security advisory services and thus valuable for mapping target employers and clients in a job search.",
+  "generated_date": "2026-07-09T13:56:22.513475+00:00",
+  "companies": []
+}

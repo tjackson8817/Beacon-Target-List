@@ -1,5 +1,12 @@
 [
   {
+    "slug": "ot-ics",
+    "list_name": "OT ICS",
+    "seed_company": "Accenture",
+    "generated_date": "2026-07-09T13:56:22.513475+00:00",
+    "total_companies": 0
+  },
+  {
     "slug": "ics",
     "list_name": "ICS",
     "seed_company": "accenture",
