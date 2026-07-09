@@ -2,24 +2,40 @@
   "list_name": "OT",
   "seed_company": "Accenture",
   "seed_website": "accenture.com",
-  "industry_keywords": "OT Cybersecurity",
-  "geography": "USA",
+  "industry_keywords": "OT, Cybersecurity, Consulting, Advisory",
+  "geography": "US",
   "primary_naics": [
     {
       "code": "541512",
-      "description": "Computer Systems Design Services"
+      "description": ""
     },
     {
       "code": "541611",
-      "description": "Administrative Management and General Management Consulting Services"
+      "description": ""
     },
     {
       "code": "541618",
-      "description": "Other Management Consulting Services"
+      "description": ""
+    },
+    {
+      "code": "541690",
+      "description": ""
+    },
+    {
+      "code": "541330",
+      "description": ""
+    },
+    {
+      "code": "541519",
+      "description": ""
+    },
+    {
+      "code": "541513",
+      "description": ""
     }
   ],
   "secondary_naics": [],
   "naics_rationale": "",
-  "generated_date": "2026-07-09T12:25:03.255819+00:00",
+  "generated_date": "2026-07-09T13:09:24.222013+00:00",
   "companies": []
 }
