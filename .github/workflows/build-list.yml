@@ -1,0 +1,76 @@
+name: Build Target Company List
+
+on:
+  workflow_dispatch:
+    inputs:
+      list_name:
+        description: "Name for this list (used as filename/title, e.g. your name + search focus)"
+        required: true
+        type: string
+      seed_company:
+        description: "Your (or a seed) company name, optional if NAICS codes are given"
+        required: false
+        type: string
+      seed_website:
+        description: "Seed company website, optional"
+        required: false
+        type: string
+      seed_naics:
+        description: "Comma-separated NAICS codes to start from, optional (defaults to OT-cyber-consulting codes if blank and no seed company given)"
+        required: false
+        type: string
+      industry_keywords:
+        description: "Industry/keyword focus, e.g. 'industrial cybersecurity, manufacturing, critical infrastructure'"
+        required: false
+        type: string
+      geography:
+        description: "Geography filter, e.g. 'Texas, United States' (optional)"
+        required: false
+        type: string
+      max_companies:
+        description: "Max companies to include (keep modest to control cost/time — default 25)"
+        required: false
+        type: string
+        default: "25"
+      skip_ai_enrichment:
+        description: "Quick/free mode: SEC EDGAR public companies only, no AI research or enrichment (much cheaper, less complete)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests openpyxl
+
+      - name: Build target list
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LIST_NAME: ${{ inputs.list_name }}
+          SEED_COMPANY: ${{ inputs.seed_company }}
+          SEED_WEBSITE: ${{ inputs.seed_website }}
+          SEED_NAICS: ${{ inputs.seed_naics }}
+          INDUSTRY_KEYWORDS: ${{ inputs.industry_keywords }}
+          GEOGRAPHY: ${{ inputs.geography }}
+          MAX_COMPANIES: ${{ inputs.max_companies }}
+          SKIP_AI_ENRICHMENT: ${{ inputs.skip_ai_enrichment }}
+        run: python scripts/build_target_list.py
+
+      - name: Commit report
+        run: |
+          git config user.name "target-list-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/reports/*.json data/reports/*.xlsx
+          git diff --quiet --cached || git commit -m "Add target list: ${{ inputs.list_name }}"
+          git push
