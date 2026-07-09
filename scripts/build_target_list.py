@@ -306,7 +306,7 @@ def expand_naics(seed_company, seed_website, seed_naics, industry_keywords):
             f"adjacent service providers) relevant for an OT cybersecurity consulting/advisory job search."
         )
     try:
-        result = call_claude(SYSTEM_NAICS_EXPANSION, user_content, max_tokens=2000)
+        result = call_claude(SYSTEM_NAICS_EXPANSION, user_content, max_tokens=4096)
     except Exception as exc:
         print(f"NAICS expansion call failed entirely: {exc}. Falling back to seed/default codes.", file=sys.stderr)
         result = None
