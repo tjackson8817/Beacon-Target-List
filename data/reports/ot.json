@@ -2,8 +2,8 @@
   "list_name": "OT",
   "seed_company": "Accenture",
   "seed_website": "accenture.com",
-  "industry_keywords": "OT, Cybersecurity, Consulting, Advisory",
-  "geography": "US",
+  "industry_keywords": "OT Cybersecurity Consulting",
+  "geography": "USA",
   "primary_naics": [
     {
       "code": "541512",
@@ -36,6 +36,6 @@
   ],
   "secondary_naics": [],
   "naics_rationale": "",
-  "generated_date": "2026-07-09T13:09:24.222013+00:00",
+  "generated_date": "2026-07-09T13:14:10.976807+00:00",
   "companies": []
 }
