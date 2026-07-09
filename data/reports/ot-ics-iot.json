@@ -1,0 +1,933 @@
+{
+  "list_name": "OT ICS IoT",
+  "seed_company": "Accenture",
+  "seed_website": "accenture.com",
+  "industry_keywords": "OT Cybersecurity",
+  "geography": "USA",
+  "primary_naics": [
+    {
+      "code": "541512",
+      "description": "Computer Systems Design Services"
+    },
+    {
+      "code": "541611",
+      "description": "Administrative Management and General Management Consulting Services"
+    },
+    {
+      "code": "541618",
+      "description": "Other Management Consulting Services"
+    }
+  ],
+  "secondary_naics": [
+    {
+      "code": "541519",
+      "description": "Other Computer Related Services",
+      "relationship": "Adjacent/competing service line \u2014 used heavily for niche cybersecurity, managed security, and OT-focused technical services offered by Accenture and its rivals (Deloitte, IBM, Booz Allen, etc.)"
+    },
+    {
+      "code": "541690",
+      "description": "Other Scientific and Technical Consulting Services",
+      "relationship": "Adjacent service provider \u2014 covers OT/industrial risk, engineering, and specialized technical consulting used by cybersecurity consultancies for federal/industrial contracts"
+    },
+    {
+      "code": "561621",
+      "description": "Security Systems Services (except Locksmiths)",
+      "relationship": "Adjacent physical/OT security overlap \u2014 installation, monitoring, and integration of network-connected industrial security systems (cameras, access control, SCADA-adjacent physical security)"
+    },
+    {
+      "code": "511210",
+      "description": "Software Publishers",
+      "relationship": "Supplier/vendor \u2014 OT security software and platform vendors (e.g., Claroty, Dragos, Nozomi Networks, Tenable.ot) whose products Accenture integrates or partners with"
+    },
+    {
+      "code": "334513",
+      "description": "Instruments and Related Products Manufacturing for Measuring, Displaying, and Controlling Industrial Process Variables",
+      "relationship": "Manufacturer served \u2014 producers of industrial control system (ICS/SCADA) hardware that require OT cybersecurity hardening"
+    },
+    {
+      "code": "221122",
+      "description": "Electric Power Distribution",
+      "relationship": "Client/manufacturer served \u2014 utilities are a top-tier OT cybersecurity client segment (grid, substation, and SCADA protection)"
+    },
+    {
+      "code": "324110",
+      "description": "Petroleum Refineries",
+      "relationship": "Client served \u2014 critical infrastructure sector with heavy reliance on OT/ICS cybersecurity for refining and pipeline operations"
+    },
+    {
+      "code": "325",
+      "description": "Chemical Manufacturing",
+      "relationship": "Client served \u2014 process manufacturing sector requiring ICS/OT security for DCS and safety instrumented systems"
+    },
+    {
+      "code": "336",
+      "description": "Transportation Equipment Manufacturing",
+      "relationship": "Client served \u2014 automotive/aerospace manufacturers with connected factory floors (Industry 4.0) needing OT security consulting"
+    },
+    {
+      "code": "541511",
+      "description": "Custom Computer Programming Services",
+      "relationship": "Competitor/adjacent \u2014 software development firms building secure OT/IT integration tools, often competing for the same consulting engagements"
+    },
+    {
+      "code": "928110",
+      "description": "National Security",
+      "relationship": "Client/government sector \u2014 federal and defense OT cybersecurity contracts (e.g., Accenture Federal Services) tied to national security infrastructure"
+    },
+    {
+      "code": "541715",
+      "description": "Research and Development in the Physical, Engineering, and Life Sciences",
+      "relationship": "Adjacent service provider \u2014 engineering R&D firms supporting industrial control system security research and standards development (e.g., IEC 62443)"
+    }
+  ],
+  "naics_rationale": "Accenture is classified primarily as a management/IT consulting firm. Business data providers consistently list Accenture under NAICS 541618 (Other Management Consulting Services), with related entities like Accenture Federal Services under 541611 (Administrative Management and General Management Consulting Services), and broader industry rollups under 5416 (Management, Scientific, and Technical Consulting Services). For its technology/cybersecurity delivery arm, 541512 (Computer Systems Design Services) is the most commonly cited primary code for firms offering OT/IT cybersecurity consulting, since there is no single NAICS code exclusively for cybersecurity. Secondary codes reflect (1) competitor consultancies and system integrators (541519, 541511, 541690), (2) OT security software/hardware vendors and physical security integrators that Accenture partners with or competes against (511210, 561621), (3) critical-infrastructure and manufacturing client sectors that consume OT cybersecurity services \u2014 utilities, oil & gas, chemicals, and industrial equipment manufacturers (221122, 324110, 325, 334513, 336) \u2014 and (4) government/defense-related codes (928110) relevant to Accenture Federal Services' OT/ICS security work. Multiple sources confirm there is no NAICS code exclusively for cybersecurity, with 541512 and 541519 being the most frequently used classifications industry-wide, supplemented by 541611 for risk/compliance consulting engagements.",
+  "generated_date": "2026-07-09T14:16:54.802556+00:00",
+  "companies": [
+    {
+      "company": "Dragos, Inc.",
+      "website": "https://www.dragos.com",
+      "category": "OT/ICS Cybersecurity Vendor (Software Platform + Services)",
+      "hq": "Hanover, Maryland, United States",
+      "industry_emphasis": "Industrial control systems (ICS)/OT cybersecurity platform and services for electric, oil & gas, manufacturing, water, chemical, mining, transportation, and government sectors",
+      "company_size_band": "~600-630 employees",
+      "revenue_band": "~$150M-$208M ARR (est., part of newly combined Accenture/Dragos/runZero/NetRise business)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Dragos is a pure-play, market-leading OT/ICS cybersecurity company whose entire business is industrial threat detection, asset visibility, and OT incident response/consulting services \u2014 an ideal target for an OT security consulting/advisory professional.",
+      "growth_signals": "Major inflection event: <cite index=\"31-2\">Accenture is expanding its position with the acquisition of a majority stake in Dragos and all of runZero and NetRise to deliver end-to-end operational technology (OT) security for the critical infrastructure and industrial operations underpinning power grids, pipelines, manufacturing, distribution facilities and data centers</cite>. <cite index=\"32-3\">The deal values industrial cybersecurity giant Dragos at $3.25 billion, and runZero and NetRise will operate under Dragos</cite>. <cite index=\"31-6\">Together, Dragos, runZero and NetRise are estimated to generate approximately $208 million in annual recurring revenue as of June 2026, representing 53% year-over-year growth</cite>. The deal is expected to close August/September 2026, creating significant integration and scaling activity (and likely new roles) as Dragos becomes the OT security platform arm of Accenture's consulting business.",
+      "outreach_strategy": "Given the pending Accenture majority-stake acquisition, position outreach around both Dragos' standalone hiring needs and the emerging Accenture-Dragos combined OT security practice; emphasize consulting/advisory experience bridging OT technology and enterprise-scale delivery, since Accenture brings 'decades of trusted relationships' with critical infrastructure operators that will need advisory talent to scale.",
+      "target_executive_titles": [
+        "VP Industrial/OT Cybersecurity Services",
+        "Director of Professional Services",
+        "Director OT Security Consulting",
+        "VP Customer Success - Industrial",
+        "Head of Global Services"
+      ],
+      "linkedin_search_keywords": [
+        "Dragos OT cybersecurity",
+        "Dragos professional services",
+        "Dragos ICS threat intelligence",
+        "Dragos Accenture integration",
+        "Dragos industrial cybersecurity consultant"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Active postings found for roles such as Senior ICS/OT Cyber Threat Intelligence Analyst, Senior Cyber Threat Intelligence Analyst (APAC), Data Engineering Manager, Senior Technical Account Manager (OT cybersecurity advisory), and various sales/GTM roles across regions; company describes itself as remote-first and actively recruiting amid the Accenture deal integration.",
+      "priority_score": 9,
+      "source_url": "https://newsroom.accenture.com/news/2026/accenture-to-strengthen-critical-infrastructure-defense-with-end-to-end-cybersecurity-platform-in-age-of-ai-driven-cyber-threats-and-geopolitical-risk",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "GuidePoint Security LLC",
+      "website": "https://www.guidepointsecurity.com",
+      "category": "Cybersecurity Consulting / VAR / Managed Security Services Provider",
+      "hq": "Reston, Virginia, United States (also cited as Herndon, VA in some sources)",
+      "industry_emphasis": "Broad enterprise and government cybersecurity consulting/advisory, including a dedicated OT Security Services practice (assessments, program development, managed services) alongside cloud, application, identity, and threat/SOC services",
+      "company_size_band": "~1,000-1,150 employees",
+      "revenue_band": "~$195M-$267M (estimate; sources vary)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "Medium",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "GuidePoint is a large, well-established cybersecurity advisory/consulting firm (not primarily OT-native) that has built out a specific OT security service line, making it a strong fit for OT security consulting expertise even though its core business spans broader IT cybersecurity. <cite index=\"19-7\">GuidePoint OT Security Services include assessments, program development and managed services to protect critical infrastructure while ensuring uptime and safety.</cite>",
+      "growth_signals": "<cite index=\"13-6\">More than 6,000 organizations of all sizes and across every industry, as well as over half of U.S. cabinet-level agencies, rely on GuidePoint to strengthen their defenses and reduce risk.</cite> The firm continues to expand its technology partnerships (e.g., recent partnerships with Netenrich and Specops Software) and was recognized as a Palo Alto Networks 2025 North America Growth Partner of the Year, indicating continued commercial momentum.",
+      "outreach_strategy": "Target the OT Security Services practice specifically rather than the broader IT security business; emphasize hands-on ICS/SCADA consulting experience since job postings show GuidePoint explicitly seeking candidates with 3+ years in OT security/industrial control systems for pre-sales and delivery roles.",
+      "target_executive_titles": [
+        "Director OT Security Services",
+        "VP Security Consulting Services",
+        "Practice Lead - Operational Technology Security",
+        "Senior Director Professional Services",
+        "VP Solutions Engineering"
+      ],
+      "linkedin_search_keywords": [
+        "GuidePoint Security OT Security Services",
+        "GuidePoint Security ICS SCADA",
+        "GuidePoint Security operational technology pre-sales",
+        "GuidePoint Security security consulting",
+        "GuidePoint Security critical infrastructure"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Active job postings identified for OT-specific roles including a 'Senior Operational Technology Security Pre-Sales Engineer' (remote, anywhere in the U.S.) requiring 3+ years in OT security/ICS/SCADA/IIoT environments, alongside broader ongoing hiring across security engineering, consulting, and federal roles.",
+      "priority_score": 8,
+      "source_url": "https://www.indeed.com/q-%22guidepoint-security%22-jobs.html",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "ABS Group of Companies, Inc.",
+      "website": "https://www.abs-group.com",
+      "category": "Risk, Safety & Industrial Cybersecurity Consulting (subsidiary of American Bureau of Shipping)",
+      "hq": "Spring, Texas, United States",
+      "industry_emphasis": "Risk and reliability engineering consulting for marine/offshore, oil & gas, chemical, power, and industrial sectors, with a dedicated OT/industrial cybersecurity consulting practice and an Industrial Security Operations Center (ISOC)",
+      "company_size_band": "1,000-5,000 employees globally",
+      "revenue_band": "unknown (private subsidiary; no independently disclosed figures found)",
+      "confidence": "unknown",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "Medium",
+      "why_this_company_fits": "ABS Group operates a long-standing industrial risk/safety consulting business with a specific OT cybersecurity offering built on deep engineering and critical-infrastructure domain expertise, making it a strong OT-security-adjacent consulting employer for candidates coming from engineering/safety or hybrid IT-OT backgrounds. <cite index=\"21-27,21-28,21-29\">With more than 50 years of risk and safety management experience, ABS Consulting offers cybersecurity solutions tailored to your operational risk to help you mitigate attacks in real time and minimize operational disruption and downtime... We apply cutting-edge technology targeted to meet your needs and leverage a state-of-the-art Industrial Security Operations Center (ISOC) that allows us to identify and mitigate attacks in real-time</cite>.",
+      "growth_signals": "<cite index=\"23-1,23-7\">Headquartered in Spring, Texas, ABS Group operates with more than 1,000 professionals globally, serving the marine and offshore, oil, gas and chemical, government and industrial sectors</cite> and was named one of America's Best Consulting Firms by Forbes. Regulatory tailwinds are boosting demand: <cite index=\"28-4,28-5\">the company released a paper to support vessel and facility owners and operators in meeting compliance with the U.S. Coast Guard's (USCG) Maritime Cyber Rule, outlining practical steps to meet the first cybersecurity training deadline of January 12, 2026</cite>, plus a new MTSA Cybersecurity Training Series product line.",
+      "outreach_strategy": "Frame outreach around the Cybersecurity/OT practice within ABS Consulting, referencing the maritime cyber regulatory deadline (USCG Maritime Cyber Rule) and ISOC capability as a hook; the firm's engineering/safety heritage means candidates with a blended OT-engineering-plus-cyber background will resonate strongly.",
+      "target_executive_titles": [
+        "Global Head of Industrial Cybersecurity",
+        "Director OT Cybersecurity Consulting",
+        "Principal Consultant - OT/ICS Security",
+        "VP Cybersecurity Solutions",
+        "Practice Director - Industrial Security"
+      ],
+      "linkedin_search_keywords": [
+        "ABS Group industrial cybersecurity",
+        "ABS Consulting OT cybersecurity",
+        "ABS Group ISOC",
+        "ABS Consulting maritime cyber",
+        "ABS Group cyber risk management"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Direct, current OT cybersecurity opening found: <cite index=\"62-1,62-3,62-4,62-5\">ABS Group is looking for a Principal Consultant to serve as the on-the-ground OT cybersecurity expert for a major industrial client, operating at the intersection of cybersecurity, control systems engineering, and regulatory compliance, advising on ICS/DCS security controls, asset and vulnerability management programs, and MTSA compliance, with a hybrid schedule in southeast Texas</cite>. Additional related postings include a Telecommunications Analyst supporting IT/OT dependency mapping for DoD clients.",
+      "priority_score": 8,
+      "source_url": "https://hbbq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Mangan Inc. (Mangan Cybersecurity)",
+      "website": "https://manganinc.com/ (cyber practice: https://www.mangancyber.com/)",
+      "category": "Boutique OT/ICS engineering & cybersecurity consultancy",
+      "hq": "Long Beach, California, USA",
+      "industry_emphasis": "Oil & Gas, Refining, Pipeline/Midstream, Chemicals & Petrochemical, Biopharma/Life Sciences, Power Distribution",
+      "company_size_band": "~300-350 employee-owners (private, employee-owned)",
+      "revenue_band": "$50M-$150M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Mangan runs a dedicated OT cybersecurity brand (Mangan Cybersecurity) built on 31+ years of controls/systems integration experience combined with cyber expertise. Their offering directly matches OT/ICS advisory work: threat and risk analysis, gap analysis, ISA/IEC 62443 alignment, NIST CSF mapping, and their proprietary ICSSbD\u00ae toolkit for industrial control system risk assessment.",
+      "growth_signals": "Mangan formalized a strategic partnership with TXOne Networks in 2023 to expand OT cybersecurity hardware/software/services, becoming a certified TXOne systems integrator, indicating active OT security practice expansion alongside their long-standing controls integration business.",
+      "outreach_strategy": "Approach via the Mangan Cybersecurity practice leadership rather than the parent engineering firm; emphasize IEC 62443 / ICSSbD-aligned assessment experience and prior refinery/pipeline/chemical OT security engagements to align with their existing client base (oil & gas, TSA Pipeline Directive compliance, chemical terminals).",
+      "target_executive_titles": [
+        "Chief Technology Officer",
+        "Director OT Cybersecurity",
+        "VP Industrial Cybersecurity",
+        "Practice Lead Cybersecurity Services",
+        "Director Controls & Automation"
+      ],
+      "linkedin_search_keywords": [
+        "Mangan Cybersecurity",
+        "Mangan Inc OT Cybersecurity",
+        "ICSSbD Mangan",
+        "Mangan Inc controls engineer cybersecurity",
+        "Mangan TXOne partnership"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "Mangan's careers page and LinkedIn/Indeed listings show ongoing recruitment for engineering/controls roles, but no OT-cybersecurity-specific job posting was confirmed as currently open at the time of research; general hiring activity appears active but modest (single-digit open roles reported on job boards).",
+      "priority_score": 7,
+      "source_url": "https://www.mangancyber.com/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "CBIZ Pivot Point Security",
+      "website": "https://www.pivotpointsecurity.com/",
+      "category": "IT/information security compliance consultancy (part of large public professional services firm)",
+      "hq": "Hamilton/Trenton, New Jersey, USA",
+      "industry_emphasis": "Cross-industry information security & compliance: technology, healthcare, finance, government, energy, legal (ISO 27001, SOC 2, CMMC, vCISO)",
+      "company_size_band": "~30 employees at acquisition (2023); now integrated into CBIZ Technology, LLC (larger parent headcount)",
+      "revenue_band": "Parent is public (CBIZ, NYSE: CBZ) - unit-level revenue not separately disclosed",
+      "confidence": "public-company (see EDGAR)",
+      "ot_ics_relevance": "Low",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "CBIZ acquired information security consulting firm Pivot Point Security in 2023 to build out cyber/compliance advisory capability. Pivot Point's core services are ISO 27001, SOC audits, penetration testing, vulnerability assessments, vCISO, and CMMC preparation \u2014 strong general cybersecurity consulting fit, but public evidence of dedicated OT/ICS-specific practice work is limited; their published focus areas (Kubernetes, DevSecOps, GDPR/CPRA, CMMC) are predominantly IT/compliance rather than industrial/OT.",
+      "growth_signals": "As per a notification letter dated May 12, 2025, the CBIZ Risk & Advisory Services cybersecurity practice (which includes Pivot Point) is being merged with Marcum Technology LLC and rebranded as CBIZ Technology, LLC, effective June 1, 2025 \u2014 signaling active consolidation/scaling of CBIZ's broader cybersecurity practice following its 2023 acquisitions.",
+      "outreach_strategy": "Given the 2025 merger into CBIZ Technology, LLC, target the newly combined practice rather than the legacy Pivot Point brand alone; position any pitch around expanding CBIZ Technology's service line into OT/ICS security, an area where the current practice appears to have a gap versus its strong IT/compliance offering.",
+      "target_executive_titles": [
+        "Managing Director Cybersecurity",
+        "VP Risk Advisory Services",
+        "Practice Leader CBIZ Technology",
+        "Director Compliance & Security Consulting"
+      ],
+      "linkedin_search_keywords": [
+        "CBIZ Pivot Point Security",
+        "CBIZ Technology cybersecurity",
+        "Pivot Point Security ISO 27001",
+        "CBIZ Risk Advisory Services cyber",
+        "CBIZ CMMC vCISO"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "No specific current job postings for OT/ICS roles were found; general cybersecurity consulting hiring at CBIZ Technology could not be confirmed as active or inactive from available search results.",
+      "priority_score": 4,
+      "source_url": "https://www.pivotpointsecurity.com/company/contact/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "1898 & Co. (Burns & McDonnell)",
+      "website": "https://1898andco.burnsmcd.com/",
+      "category": "Large engineering-firm-affiliated business/technology/OT security consultancy",
+      "hq": "Kansas City, Missouri, USA",
+      "industry_emphasis": "Critical infrastructure: electric & water utilities, oil & gas refineries/pipelines, transportation, manufacturing \u2014 IT/OT convergence, industrial cybersecurity, managed security services",
+      "company_size_band": "Parent Burns & McDonnell: 13,500+ employee-owners (private, ESOP)",
+      "revenue_band": "Parent Burns & McDonnell: est. $7B-$8.9B annual revenue (private, ESOP-owned, no SEC filings)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "1898 & Co. is explicitly described as a global business, technology and security consultancy serving critical infrastructure industries, and it is a premier OT/ICS/SCADA cybersecurity consulting practice under Burns & McDonnell, offering network penetration testing, vulnerability assessments, secure system design, and NIST CSF/RMF-aligned cybersecurity programs. Its Managed Threat Protection & Response service is one of the first to apply OT/ICS-specialized threat hunting into managed security services, leveraging Dragos, Claroty, Armis, and CrowdStrike partnerships.",
+      "growth_signals": "1898 & Co. joined the Operational Technology Cybersecurity Coalition in 2024 as part of its initial membership expansion, and launched a new Managed Threat Protection & Response capability in 2023 to extend its existing Managed Security Services \u2014 both signal active OT-security practice growth. The firm also hosted a dedicated 2024 Cybersecurity Forum and opened an Advanced Threat Protection Center, reflecting continued investment in OT/IT cyber capability.",
+      "outreach_strategy": "Target the Security & Risk Consulting / Advanced Threat Protection Center leadership within 1898 & Co. directly (distinct from core Burns & McDonnell engineering divisions); leverage the firm's active hiring for OT/ICS/SCADA cybersecurity consulting roles and its critical-infrastructure client base (utilities, oil & gas, water, transportation) as an entry point.",
+      "target_executive_titles": [
+        "VP/General Manager Security & Risk Consulting",
+        "Director Advanced Threat Protection Center",
+        "Director Cybersecurity & Risk Consulting",
+        "Director Managed Security Services",
+        "Managing Director OT/ICS Security"
+      ],
+      "linkedin_search_keywords": [
+        "1898 & Co cybersecurity",
+        "1898 & Co OT ICS security",
+        "Burns McDonnell industrial cybersecurity",
+        "1898 & Co Managed Security Services",
+        "1898 & Co Advanced Threat Protection Center"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "An Industrial Cybersecurity Analyst role at 1898 & Co. (Washington, DC) was posted in mid-2025 for the OT/ICS/SCADA-focused Security & Risk Consulting practice, indicating active recruiting for OT cybersecurity consulting positions.",
+      "priority_score": 9,
+      "source_url": "https://1898andco.burnsmcd.com/what-we-do/industrial-cybersecurity",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Nozomi Networks",
+      "website": "https://www.nozominetworks.com",
+      "category": "OT/IoT/CPS Cybersecurity Vendor (Network Detection & Response)",
+      "hq": "San Francisco, CA (R&D also in Mendrisio, Switzerland)",
+      "industry_emphasis": "Operational Technology (OT), IoT, and cyber-physical systems security platform for critical infrastructure, energy, manufacturing, mining, transportation, utilities, and building automation.",
+      "company_size_band": "201-500 employees (estimate)",
+      "revenue_band": "$100M+ ARR (estimate, private/subsidiary reporting)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "<cite index=\"3-1,3-14\">Nozomi Networks offers a cybersecurity platform that protects operational technology, Internet of Things, and cyber\u2011physical systems, providing asset discovery, continuous monitoring, threat detection, and risk management.</cite> As of January 2026, <cite index=\"41-1,41-3,41-4\">Mitsubishi Electric Corporation completed its acquisition of the company, marking the start of a new phase of growth for Nozomi Networks while preserving the company's independent operations, vendor-neutral technology roadmap, and established go-to-market partnerships, as a wholly owned subsidiary.</cite> This is a pure-play OT/ICS security vendor -- an excellent fit for OT cybersecurity advisory expertise, though note it now operates as a subsidiary of a large Japanese industrial conglomerate rather than an independent company.",
+      "growth_signals": "<cite index=\"41-5,41-6\">The company recently surpassed $100M in annual revenue and now serves many of the world's largest enterprises, including 5 of the top 10 oil and gas companies, 7 of the top 10 pharmaceutical manufacturers, and 7 of the top 10 utilities.</cite> <cite index=\"50-1\">Nozomi has a high compound annual growth rate (CAGR) of 33% and a strong revenue base with a gross profit margin exceeding 70%.</cite> <cite index=\"41-10\">It is also cited as the first privately held OT cybersecurity company to achieve sustained cash flow and break-even performance.</cite> The Mitsubishi Electric deal, valued near $1 billion, is expected to fuel further R&D and go-to-market investment.",
+      "outreach_strategy": "Position as an OT cybersecurity advisory partner given its heavy enterprise/critical-infrastructure customer base; target the go-to-market, MSSP/channel, and post-acquisition integration teams (now backed by Mitsubishi Electric) since new investment and joint AI/OT initiatives are underway. Reference Gartner/Forrester leadership recognition when engaging.",
+      "target_executive_titles": [
+        "VP Global Revenue Operations",
+        "VP Industrial Cybersecurity",
+        "Director OT/ICS Channel & MSSP Programs",
+        "Director Professional Services - OT Security",
+        "VP Public Sector / Critical Infrastructure"
+      ],
+      "linkedin_search_keywords": [
+        "Nozomi Networks OT security",
+        "Nozomi Networks Mitsubishi Electric",
+        "Nozomi Networks MSSP",
+        "Nozomi Networks Vantage IQ",
+        "Nozomi Networks professional services"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "<cite index=\"6-4\">Nozomi Networks is currently seeking a Vice President, Global Revenue Operations.</cite> General hiring activity continues post-acquisition as the company scales under Mitsubishi Electric ownership.",
+      "priority_score": 8,
+      "source_url": "https://www.nozominetworks.com/press-release/nozomi-networks-enters-next-phase-of-growth-as-mitsubishi-electric-completes-acquisition",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Claroty",
+      "website": "https://claroty.com",
+      "category": "Cyber-Physical Systems (CPS) / OT-IoT-IoMT Cybersecurity Vendor",
+      "hq": "New York, NY",
+      "industry_emphasis": "Cyber-physical systems protection across industrial (OT), healthcare (IoMT), and enterprise (IoT/Extended IoT) environments, including energy, water, manufacturing, and healthcare sectors.",
+      "company_size_band": "500-1,000 employees (estimate)",
+      "revenue_band": "$100M-$500M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "<cite index=\"16-1,16-2\">Claroty is the cyber-physical systems (CPS) protection company, founded in 2015 by Team8, headquartered in New York City with global presence across Europe, Asia-Pacific, and Latin America, empowering organizations to secure cyber-physical systems across industrial (OT), healthcare (IoMT), and enterprise (IoT) environments.</cite> <cite index=\"16-5\">The company now serves 24 of the Fortune 100 and has been named a Leader in the inaugural Gartner Magic Quadrant for CPS Protection Platforms.</cite> This is one of the most recognized pure-play OT/CPS security vendors globally, making it a top-tier target for OT cybersecurity advisory expertise.",
+      "growth_signals": "<cite index=\"18-2,18-3,18-4\">Claroty announced it has raised $150 million in a Series F funding round led by Golub Growth, an affiliate of Golub Capital, intended to accelerate Claroty's global expansion as it continues to build a comprehensive cybersecurity platform for cyber-physical systems (CPS) and critical infrastructure.</cite> <cite index=\"18-6\">Claroty added 24 Fortune 500 customers and recently launched what it described as a first-of-its-kind AI-based catalog for classifying physical assets.</cite> <cite index=\"18-6\">The company could be ready for an IPO as early as next year, although that will depend heavily on market conditions.</cite>",
+      "outreach_strategy": "Engage via the field/solutions engineering and OT security consulting arms, especially around the Series F growth push into new verticals (healthcare IoMT, federal/public sector). Reference recent Gartner Magic Quadrant Leader status and the CRO change (new Chief Revenue Officer hire) as a conversation starter about expanding advisory/solutions capacity.",
+      "target_executive_titles": [
+        "Chief Revenue Officer",
+        "VP OT/ICS Solutions Engineering",
+        "Director Professional Services - CPS Protection",
+        "VP Federal/Public Sector",
+        "Director Threat Research (Team82)"
+      ],
+      "linkedin_search_keywords": [
+        "Claroty OT security solutions engineer",
+        "Claroty xDome",
+        "Claroty Team82",
+        "Claroty CPS protection",
+        "Claroty Series F"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Multiple active postings for OT Security Solutions Engineer roles (e.g., Midwest, West regions) found on Claroty's careers site and NightDragon job board; <cite index=\"53-1,53-2\">LinkedIn currently lists roughly 141 Claroty jobs in the United States.</cite>",
+      "priority_score": 9,
+      "source_url": "https://claroty.com/careers",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Optiv Inc.",
+      "website": "https://www.optiv.com",
+      "category": "Cybersecurity Consulting, Advisory, and Managed Security Services (MSSP)",
+      "hq": "Denver, CO",
+      "industry_emphasis": "End-to-end cybersecurity strategy, managed security services, incident response, risk & compliance, and security technology integration across virtually every major industry, including critical infrastructure/OT clients.",
+      "company_size_band": "2,000-7,000+ employees (estimate; varies significantly by data source)",
+      "revenue_band": "$500M-$1B+ (estimate; private company, figures vary widely across data providers)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "Medium",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "<cite index=\"24-6,24-7\">Optiv is the cyber advisory and solutions leader, delivering strategic and technical expertise to nearly 6,000 companies across every major industry, partnering with organizations to advise, deploy and operate cybersecurity programs from strategy and managed security services to risk, integration and technology solutions.</cite> As one of the largest independent cybersecurity consulting/advisory firms in North America, Optiv is a strong target for OT cybersecurity advisory talent, though OT/ICS is one practice area within a much broader IT-security consulting portfolio rather than its sole focus.",
+      "growth_signals": "Optiv previously filed for an IPO (S-1, 2016) but withdrew the registration in 2018 and remains privately held (previously backed by private equity including KKR and Blackstone per historical reporting). <cite index=\"35-2,35-9\">As of mid-2026, Optiv is actively hiring for around 29 open positions in the United States according to Glassdoor.</cite> The company continues to run its annual 'OptivCon' industry event and produce cyber-risk thought leadership content, signaling ongoing market engagement.",
+      "outreach_strategy": "Target Optiv's advisory/consulting practice leads and industrial/critical-infrastructure vertical teams; given its broad generalist cyber consulting client base, position OT expertise as a differentiator to help Optiv expand its OT/ICS advisory offering. Look for practice-level or 'Principal Advisor' roles focused on industrial clients.",
+      "target_executive_titles": [
+        "VP Industrial/OT Cybersecurity Practice",
+        "Principal Advisor - Critical Infrastructure",
+        "Director OT/ICS Security Consulting",
+        "VP Advisory Services",
+        "Practice Director - Risk & Compliance"
+      ],
+      "linkedin_search_keywords": [
+        "Optiv OT security consulting",
+        "Optiv critical infrastructure advisory",
+        "Optiv Principal Cybersecurity Advisor",
+        "Optiv managed security services",
+        "Optiv ICS SCADA"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "<cite index=\"35-2\">Optiv is currently hiring for 29 open positions in the United States per Glassdoor</cite>; <cite index=\"34-1\">Indeed lists 23 Optiv Cyber Security jobs available</cite>, spanning advisory, engineering, and sales roles, though no OT-specific listings were confirmed at time of research.",
+      "priority_score": 8,
+      "source_url": "https://www.optiv.com/company/careers",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Ampyx Cyber",
+      "website": "https://ampyxcyber.com",
+      "category": "OT/ICS Cybersecurity Consulting Firm (Pure-Play)",
+      "hq": "Portland, Oregon, USA (also Tallinn, Estonia office; registered entities in US and Germany)",
+      "industry_emphasis": "Critical infrastructure asset owners \u2014 power/electric utilities, water, gas, transportation; deep NERC CIP, NIS2, CER, and Cyber Resilience Act (CRA) regulatory focus",
+      "company_size_band": "Small (estimate, ~20-75 employees)",
+      "revenue_band": "$5M-$25M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Ampyx Cyber (formerly Ampere Industrial Security) is a services-only firm exclusively focused on ICS/OT security and regulatory compliance. Its own materials state it is <cite index=\"3-1,3-2\">a specialized, services-only international consulting firm operating across North America and Europe, focused exclusively on the security of Industrial Control Systems (ICS) and Operational Technology (OT)</cite>, with offerings including <cite index=\"3-11,3-12,3-13,3-14,3-15\">regulatory compliance & strategy in NERC CIP, NIS2, CER, and CRA frameworks, gap audits, vulnerability assessments, M&A diligence, OT Zero Trust implementation, network segmentation, hardening, supply chain security, and specialized IT/OT training</cite>. This is one of the most pure-play OT security consultancies on the target list.",
+      "growth_signals": "The firm recently rebranded and expanded internationally: <cite index=\"8-9,8-10\">'As we transition to Ampyx Cyber, we're not only redefining our brand but also expanding our global footprint,' with new offices in Portland and Tallinn signaling growing international reach</cite>. It also <cite index=\"3-7\">appointed a new Chief Revenue Officer, Andrew Luccitti, to push growth and innovation in industrial cybersecurity</cite>, and is actively publishing threat commentary (e.g., on Volt Typhoon) signaling market visibility efforts.",
+      "outreach_strategy": "Approach via the engagement/business development team listed on the site; highlight NERC CIP/utility sector experience and hands-on OT pentesting delivery skills; reference the firm's stated hiring philosophy valuing deep industry/regulatory expertise over corporate hierarchy.",
+      "target_executive_titles": [
+        "Chief Revenue Officer",
+        "VP Industrial Cybersecurity Consulting",
+        "Director OT/ICS Security Practice",
+        "Practice Lead NERC CIP Compliance"
+      ],
+      "linkedin_search_keywords": [
+        "Ampyx Cyber",
+        "Ampere Industrial Security",
+        "OT ICS security consultant NERC CIP",
+        "industrial cybersecurity Portland Oregon"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "No explicit current job postings were found in search results; however the company messaging emphasizes recruiting 'a different kind of expert' and recent growth/CRO hire suggests possible expansion hiring.",
+      "priority_score": 9,
+      "source_url": "https://ampyxcyber.com/about-us",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "AcuTech Group, Inc. (AcuTech Consulting Group)",
+      "website": "https://acutech-consulting.com",
+      "category": "Process Safety, Security & Emergency Management Consulting Firm (with OT/ICS Cybersecurity Practice)",
+      "hq": "Virginia, USA (also offices in India, Asia-Pacific, Europe, and the Middle East)",
+      "industry_emphasis": "Chemical, petrochemical, oil & gas, refining, pharmaceutical, LNG, hydrogen, and anhydrous ammonia industries \u2014 core focus is process safety/PSM with a dedicated Functional Safety & ICS Cybersecurity Services group",
+      "company_size_band": "Mid-size (estimate, ~100-300 employees globally)",
+      "revenue_band": "$20M-$75M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "Medium",
+      "cybersecurity_relevance": "Medium",
+      "why_this_company_fits": "AcuTech is <cite index=\"11-2,11-3\">a global leader providing best-in-class consulting, training, and software solutions to manage process risk, operating since 1994</cite>, and explicitly lists <cite index=\"13-2\">Cybersecurity for Industrial Control Systems as one of its priority service areas</cite> alongside process safety and functional safety. The firm maintains a dedicated <cite index=\"16-1\">Functional Safety & ICS Cybersecurity Services group</cite>, and its security service line states <cite index=\"15-3\">seasoned consultants bring expertise in Operational Technology/Industrial Control Systems (OT/ICS) cybersecurity, with a focus on conducting thorough audits</cite>. This makes it a strong adjacent-fit target where OT cyber is a growing practice within a larger process-safety brand.",
+      "growth_signals": "The company states <cite index=\"13-1,13-13\">this investment has enabled sustained global growth through targeted expansion of teams and capabilities, and AcuTech plans to expand its global network of consultants</cite>, and is actively recruiting broadly: <cite index=\"11-20\">'We are continually searching for individuals to contribute to our core business, expand our presence in growing markets, and augment our service portfolio.'</cite> It also had a strong presence at the 2026 AIChE/GCPS conference presenting on cybersecurity for industrial control systems alongside process safety topics.",
+      "outreach_strategy": "Target the Functional Safety & ICS Cybersecurity Services group leadership directly; position candidate as complementary hire to grow the cybersecurity practice beyond its process-safety roots; engage via conference presence (AIChE/GCPS) and LinkedIn.",
+      "target_executive_titles": [
+        "Group Leader Functional Safety & ICS Cybersecurity Services",
+        "Director of Security Consulting",
+        "VP Process Safety & Security",
+        "Principal Consultant OT/ICS Cybersecurity"
+      ],
+      "linkedin_search_keywords": [
+        "AcuTech Consulting Group",
+        "AcuTech Group Inc",
+        "ICS cybersecurity process safety",
+        "CFATS security vulnerability assessment consultant"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Company site actively solicits applicants to expand its service portfolio and growing markets; recent global expansion into India, APAC, Europe, and Middle East offices suggests ongoing headcount growth.",
+      "priority_score": 7,
+      "source_url": "https://acutech-consulting.com/about/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Aerstone",
+      "website": "https://aerstone.com",
+      "category": "Cybersecurity Consulting & Assessment Firm (NSA-Certified Vulnerability Assessor; Federal + Commercial, with OT/Utilities practice)",
+      "hq": "Rockville, Maryland / Springfield, Virginia, USA (also Boulder, Colorado)",
+      "industry_emphasis": "Federal government, military, and intelligence community clients plus commercial sectors (financial services, healthcare, utilities, aerospace, education); dedicated OT/ICS cybersecurity offering for electric, gas, and pipeline utilities",
+      "company_size_band": "Small (estimate, ~20-50 employees)",
+      "revenue_band": "$5M-$20M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "Medium",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Aerstone is <cite index=\"24-4\">an NSA-Certified Vulnerability Assessor (NSA VAS) and Service-Disabled Veteran-Owned Small Business (SDVOSB) that provides subject matter expertise in the field of advanced cybersecurity</cite>, and has built out a specific OT/ICS practice for utilities: <cite index=\"21-1,21-2\">Aerstone's OT Cybersecurity Assessments help utilities and critical-infrastructure operators establish a precise baseline of control-system security, backed by a cleared team of subject matter experts in operational technology (OT), industrial control systems (ICS), and energy sector compliance</cite>. Its offerings explicitly cover <cite index=\"21-9\">TSA pipeline security directives, DHS/CISA guidance (including VADR), and NERC CIP</cite>, making it a genuine (if smaller/boutique) OT cybersecurity consulting target.",
+      "growth_signals": "The firm is expanding OT-specific service lines (VADR for pipeline operators, OT architecture design, SCADA/ICS penetration testing) and is actively hiring across cybersecurity roles: <cite index=\"32-17\">Yes, Aerstone has 6 open jobs</cite>, and its LinkedIn page notes <cite index=\"31-14,31-15,31-16\">Aerstone is hiring! seeking an experienced cybersecurity tester to join a test team supporting security control-based application, networking, mobile, and cloud-based penetration testing</cite>.",
+      "outreach_strategy": "Engage via careers page/Indeed postings and LinkedIn; emphasize NSA VAS credential alignment and TSA/NERC CIP utility compliance experience; position toward growing the newer OT/critical-infrastructure practice specifically.",
+      "target_executive_titles": [
+        "CTO",
+        "Director OT/ICS Security Services",
+        "VP Critical Infrastructure Cybersecurity",
+        "Practice Lead SCADA/Utilities Security"
+      ],
+      "linkedin_search_keywords": [
+        "Aerstone cybersecurity",
+        "Quest Consultants LLC Aerstone",
+        "NSA certified vulnerability assessor OT",
+        "Aerstone utilities cybersecurity"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Indeed lists 6 open jobs at Aerstone (Springfield, VA and Washington, DC roles including Senior Cybersecurity Analyst, Penetration Tester, Back-End/Front-End Developer); LinkedIn also shows active hiring posts for penetration testing roles.",
+      "priority_score": 7,
+      "source_url": "https://aerstone.com/utilities-cybersecurity/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "UTSI International Corporation",
+      "website": "https://utsi.com/",
+      "category": "OT/ICS Cybersecurity & SCADA Systems Integrator (boutique consultancy)",
+      "hq": "Houston/Friendswood, TX, USA",
+      "industry_emphasis": "Oil & gas pipelines, energy, transportation, critical infrastructure SCADA/ICS engineering and OT cybersecurity consulting",
+      "company_size_band": "11-50 (estimate)",
+      "revenue_band": "$5M-$25M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "UTSI is a boutique systems integrator with over four decades of pipeline/SCADA engineering roots that has pivoted heavily into OT/ICS cybersecurity consulting. The company positions itself as an OT cybersecurity solution provider offering risk assessments, incident response planning, tabletop exercises, and regulatory compliance services for critical infrastructure operators. It has been recognized as a top OT cybersecurity consultancy and works with Fortune 500 OT asset owners.",
+      "growth_signals": "UTSI has been actively expanding partnerships (Nozomi Networks, Fortinet, Schneider Electric, ThreatGEN, Quantum River) and recently announced a strategic partnership and joint venture, plus a two-year U.S. Space Force contract. The company was recognized as 'Top OT Cybersecurity Consultants 2025' by Cyber Security Review Magazine, and has built an internal SCADA R&D lab and AI tooling (DANN2.0) for OT.",
+      "outreach_strategy": "Approach as a boutique/growing OT cybersecurity consultancy expanding its advisory bench strength; position around pipeline/energy sector expertise, NERC CIP/IEC 62443 frameworks, and executive/board-level cyber risk communication capabilities given their emphasis on translating technical risk into board presentations.",
+      "target_executive_titles": [
+        "President/CEO",
+        "VP Operations & Strategy",
+        "Director OT Cybersecurity Services",
+        "Senior Cybersecurity Consultant OT/IT"
+      ],
+      "linkedin_search_keywords": [
+        "UTSI International OT cybersecurity",
+        "UTSI International ICS SCADA consultant",
+        "UTSI International pipeline cybersecurity",
+        "UTSI Houston critical infrastructure"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "No specific current OT cybersecurity job openings were found in search results; general employer review pages (Indeed/Zippia) exist but do not show live cybersecurity-specific postings at research time.",
+      "priority_score": 6,
+      "source_url": "https://utsi.com/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Xage Security",
+      "website": "https://xage.com/",
+      "category": "OT/IT/Cloud Zero Trust Cybersecurity Vendor",
+      "hq": "Palo Alto, California, USA",
+      "industry_emphasis": "Energy, utilities, defense, manufacturing, oil & gas, logistics/supply chain, and critical infrastructure zero-trust access and identity security",
+      "company_size_band": "~112 employees (estimate, per Tracxn)",
+      "revenue_band": null,
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Xage is a leading vendor in zero-trust access control purpose-built for OT, IT, and cloud environments, serving critical infrastructure customers like Kinder Morgan and the U.S. Space Force. It also runs a dedicated Xage Cybersecurity Services practice offering OT risk management and consulting, which directly overlaps with OT security advisory work.",
+      "growth_signals": "Xage has raised a total of $80M over 6 rounds, including a Series B round completed in December 2025, and reported 112 employees as of May 2026. Recent momentum includes a partnership with LTIMindtree for zero trust in critical infrastructure, integration with NVIDIA BlueField/DOCA for AI security, a Forescout partnership, and a $1.5M U.S. Navy contract for zero trust initiatives.",
+      "outreach_strategy": "Target as a fast-growing zero-trust/OT security vendor actively expanding its services and federal/critical-infrastructure business; emphasize consulting/advisory experience that complements their Xage Services professional services arm and federal government practice.",
+      "target_executive_titles": [
+        "Chief Revenue Officer",
+        "VP Federal Sales",
+        "SVP Solutions Advisory & Customer Success",
+        "Director OT/Industrial Cybersecurity Services"
+      ],
+      "linkedin_search_keywords": [
+        "Xage Security OT cybersecurity",
+        "Xage Security zero trust critical infrastructure",
+        "Xage Security services consultant",
+        "Xage Security federal"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Multiple job boards show active openings (Indeed lists 7 jobs, ZipRecruiter lists 6, Glassdoor lists 7), including engineering, solutions architect, and go-to-market roles.",
+      "priority_score": 8,
+      "source_url": "https://xage.com/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Verve Industrial Protection (a Rockwell Automation Company / SecureOT)",
+      "website": "https://www.rockwellautomation.com/en-us/capabilities/industrial-cybersecurity/welcome-to-a-new-era-of-ot-security.html",
+      "category": "OT Cybersecurity Software & Services (subsidiary of public industrial automation company)",
+      "hq": "Milwaukee, Wisconsin, USA (Rockwell Automation parent HQ); Verve originally Chicago, IL-based",
+      "industry_emphasis": "Manufacturing, critical infrastructure, and industrial automation OT asset inventory, vulnerability management, and managed cybersecurity services",
+      "company_size_band": "Public company (see EDGAR) \u2014 Rockwell Automation parent employs approximately 29,000 globally",
+      "revenue_band": "Public company (see EDGAR)",
+      "confidence": "public-company (see EDGAR)",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Rockwell Automation acquired Verve Industrial Protection in 2023, and Verve's asset inventory, vulnerability management, and patch/configuration management platform now underpins Rockwell's SecureOT suite. This is a leading, well-resourced OT cybersecurity practice with deep consulting service offerings, backed by a Fortune 500 parent that is the world's largest industrial automation company.",
+      "growth_signals": "In June 2026, Rockwell Automation launched three enhanced offerings within the SecureOT suite, adding managed services and AI/ML-driven assessment capabilities, and highlighted its IEC 62443-4-1 Maturity Level 4 certification. Rockwell continues to post OT cybersecurity consultant, sales executive, and security architect roles across multiple locations, reflecting continued investment in the practice.",
+      "outreach_strategy": "Engage via Rockwell's Lifecycle Services / SecureOT organization; position experience with NIST CSF, IEC 62443, NERC CIP, and MITRE ATT&CK for ICS frameworks, and target the OT cybersecurity consulting/advisory teams that serve Fortune 1000 manufacturing clients.",
+      "target_executive_titles": [
+        "SVP Lifecycle Services",
+        "Senior Global Product Manager, Cybersecurity Projects",
+        "Director OT Cybersecurity Consulting",
+        "NA Sales Director, Industrial Cybersecurity Services"
+      ],
+      "linkedin_search_keywords": [
+        "Rockwell Automation SecureOT",
+        "Verve Industrial Protection Rockwell",
+        "Rockwell Automation OT cybersecurity consultant",
+        "Rockwell Automation Lifecycle Services cybersecurity"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Active listings found for OT Cybersecurity Consultant, Senior OT Cybersecurity Consultant, Cybersecurity Services Sales Executive (SecureOT suite), Lead AI Security Architect, and Senior Security Engineer roles across multiple U.S. locations at research time.",
+      "priority_score": 9,
+      "source_url": "https://www.rockwellautomation.com/en-us/capabilities/industrial-cybersecurity/welcome-to-a-new-era-of-ot-security.html",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "LeveL5Cyber",
+      "website": "https://www.level5cyber.com/",
+      "category": "Boutique OT/ICS Cybersecurity Consultancy",
+      "hq": "United States (exact city/state not confirmed via search)",
+      "industry_emphasis": "Cross-sector industrial: Oil & Gas, Mining, Chemical/Petrochemical, Energy & Utilities, Life Sciences/Pharma, Food & Beverage, Financial Services, Defense Industrial Base (DIB), Agriculture, Water & Wastewater",
+      "company_size_band": "Small (boutique, likely <50 employees) (estimate)",
+      "revenue_band": "$1M-$25M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "LeveL5Cyber is a pure-play OT/ICS cybersecurity advisory firm. <cite index=\"1-3\">Their services include Risk Assessments, OT Network Segmentation Programs, OT Consulting & Enablement, Post-Segmentation Support Services, OT Firewall Lifecycle Management, and Acquisition Integrations, and the company was forged by a group of experienced leaders highly skilled in the protection of critical infrastructure.</cite> <cite index=\"7-15\">They follow industry-leading cybersecurity standards for infrastructure businesses: NIST 800 series, CMMC, ISA/IEC 62443, and ISO.</cite> This is an ideal small-firm target for an OT security consultant seeking a specialist advisory environment.",
+      "growth_signals": "Active content marketing and conference presence \u2014 <cite index=\"4-12\">members of their team attended the S4x24 conference in Miami to discuss the latest in OT and ICS</cite>. Broad and expanding industry vertical coverage (mining, oil & gas, life sciences, financial services, chemical, food, DIB) suggests active business development across sectors.",
+      "outreach_strategy": "Direct outreach to founders/leadership via LinkedIn given small firm size; highlight specific OT segmentation, firewall lifecycle, or risk assessment experience; reference S4x24/ICS community engagement as a conversation starter; consider partnership/subcontractor angle given their apparent boutique consulting model.",
+      "target_executive_titles": [
+        "Managing Partner/Principal",
+        "VP OT Cybersecurity Consulting",
+        "Director of Industrial Cybersecurity Services",
+        "Practice Lead ICS/OT Security"
+      ],
+      "linkedin_search_keywords": [
+        "LeveL5Cyber",
+        "OT cybersecurity consulting boutique",
+        "ICS security advisory firm",
+        "OT network segmentation consultant"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "No specific current job openings found via web search; company website emphasizes services rather than a careers page in search results.",
+      "priority_score": 6,
+      "source_url": "https://www.level5cyber.com/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Booz Allen Hamilton",
+      "website": "https://www.boozallen.com/",
+      "category": "Large Systems Integrator / Management & Technology Consulting (Federal + Commercial Cyber)",
+      "hq": "McLean, Virginia, USA",
+      "industry_emphasis": "Federal/Defense (DoD, Intelligence Community), Critical Infrastructure (energy, pharmaceutical, manufacturing, water), Commercial Fortune 500/Global 2000",
+      "company_size_band": "Large (Public company, tens of thousands of employees)",
+      "revenue_band": null,
+      "confidence": "public-company (see EDGAR)",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Booz Allen has a dedicated, mature OT/ICS cybersecurity practice spanning federal and commercial markets. <cite index=\"12-1\">Booz Allen's OT Cybersecurity Lab supports securing industrial control systems (ICS) and OT in critical infrastructure by providing a testing environment for developing and evaluating new capabilities.</cite> <cite index=\"12-22,12-23\">Their integrated team of industrial control systems engineers, cybersecurity specialists, and strategists supports customers across critical infrastructure sectors, protecting OT environments, employee safety, and the bottom lines, using a threat-focused approach to help identify vulnerabilities, prioritize remediation, and carry out large-scale OT cybersecurity transformations.</cite> They also serve <cite index=\"12-7\">10 of the top 20 global pharmaceutical companies, 3 of the top oil and gas companies, and 3 of the top global automakers</cite>, and maintain an OT/ICS SOC-as-a-Service offering plus a specific SAF-ICS OT risk assessment lifecycle methodology.",
+      "growth_signals": "<cite index=\"18-9\">Today, the company has over 8,000 cyber professionals delivering on nearly 300 active cyber projects ranging from small, innovative task orders to marquee</cite> engagements. <cite index=\"18-5,18-6\">Booz Allen Hamilton was named top federal cybersecurity provider, projecting $2.8 billion in cyber revenue by FY25, leading in cyber-related prime contract obligations from the federal government in fiscal years 2021 to 2023 per Deltek's GovWin analysis.</cite> Actively posting OT/ICS-specific analyst and consultant roles on their careers site and LinkedIn.",
+      "outreach_strategy": "Target through federal/commercial OT cybersecurity practice leads; leverage their published thought-leadership (Industrial Cyber contributor articles) as talking points; approach via LinkedIn recruiters posting OT/ICS roles or via their Commercial Solutions / Civil Government business units.",
+      "target_executive_titles": [
+        "VP Cyber-Physical Defense",
+        "Director OT/ICS Cybersecurity",
+        "Principal OT Cybersecurity Consultant",
+        "Senior Lead OT Cybersecurity Practice"
+      ],
+      "linkedin_search_keywords": [
+        "Booz Allen OT/ICS Cybersecurity",
+        "Booz Allen cyber-physical defense",
+        "Booz Allen SAF-ICS",
+        "Booz Allen industrial control systems consultant"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "<cite index=\"16-1,16-8\">Active LinkedIn/careers postings for an OT/ICS Cybersecurity Analyst role supporting DoD and Federal Agency client projects within the Cybersecurity domain, consulting with clients on secure design of OT and ICS environments.</cite>",
+      "priority_score": 9,
+      "source_url": "https://www.boozallen.com/markets/commercial-solutions/operational-technology-ot-cybersecurity-for-business.html",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Wood plc (Wood Group / John Wood Group)",
+      "website": "https://www.woodgroup.com/",
+      "category": "Global Engineering, Automation & Systems Integration Consultancy",
+      "hq": "Aberdeen, Scotland, UK",
+      "industry_emphasis": "Oil & Gas (Upstream, Midstream, Petrochemicals & Refining), Life Sciences/Pharma, Chemicals, Minerals & Metals, Power, Renewables, Carbon Capture, Hydrogen",
+      "company_size_band": "Large (Public company, global engineering firm)",
+      "revenue_band": null,
+      "confidence": "public-company (see EDGAR)",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "Medium",
+      "why_this_company_fits": "Wood has an established, long-running Industrial OT Cybersecurity practice integrated with its automation/controls engineering business, distinguishing it from pure-play cyber firms. <cite index=\"21-16,21-17\">Wood combines OT cybersecurity expertise with decades of experience in automation, control systems and systems integration, with specialists who understand how industrial environments operate and help organisations identify vulnerabilities, assess risk and implement practical security improvements tailored to their operational requirements.</cite> <cite index=\"23-3,23-4\">They market OT cybersecurity consulting with 25+ years experience, 500+ specialists, and 200+ clients.</cite> Their broader automation & controls business is sizable: <cite index=\"22-3\">Wood's automation and control solutions are provided globally by around 1,400 dedicated technical staff across a network of 41 offices in 17 countries.</cite>",
+      "growth_signals": "<cite index=\"21-18\">With manufacturing remaining the most targeted industry for cyberattacks and ransomware activity continuing to increase across industrial sectors, effective OT security has become a key part of operational resilience</cite> \u2014 a narrative Wood is actively using in its marketing, alongside statistics like <cite index=\"21-28\">about 1 in 4 operators had to shut down due to OT security incidents last year</cite>. Actively recruiting for a dedicated Industrial Cybersecurity Consultant role focused on North America growth.",
+      "outreach_strategy": "Approach via Wood's Digital Integration / Automation & Systems Integration business unit leadership; reference their ISA/IEC 62443 and NIST CSF-aligned Asset Protection Solutions practice; target North America energy/materials growth initiatives given active hiring signal in Houston, TX.",
+      "target_executive_titles": [
+        "Business Manager Digital Integration",
+        "Director Industrial Cybersecurity",
+        "VP Automation & Control / OT Security",
+        "Principal ICS Cybersecurity Consultant"
+      ],
+      "linkedin_search_keywords": [
+        "Wood plc OT cybersecurity",
+        "Wood Group industrial cybersecurity consultant",
+        "Wood Digital Integration ICS",
+        "John Wood Group cybersecurity"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "<cite index=\"32-1,32-3,32-4\">Actively hiring an Industrial Cybersecurity Consultant in Houston, TX, accountable for Wood's Industrial Cybersecurity and Digital Integration business growth and delivery across Energy and Materials industries in North America, providing principal consulting on ICS Cybersecurity to customers and project teams.</cite>",
+      "priority_score": 8,
+      "source_url": "https://www.woodgroup.com/solutions/expertise/cybersecurity",
+      "discovery_source": "unknown"
+    },
+    {
+      "company": "Wood plc (Wood Group)",
+      "website": "https://www.woodgroup.com",
+      "category": null,
+      "hq": null,
+      "industry_emphasis": null,
+      "company_size_band": null,
+      "revenue_band": null,
+      "confidence": "unknown",
+      "ot_ics_relevance": null,
+      "cybersecurity_relevance": null,
+      "why_this_company_fits": "This company wasn't included in the enrichment response \u2014 found via research but details weren't populated. Re-run to try again.",
+      "growth_signals": null,
+      "outreach_strategy": null,
+      "target_executive_titles": [],
+      "linkedin_search_keywords": [],
+      "currently_hiring_signal": null,
+      "currently_hiring_detail": null,
+      "priority_score": null,
+      "source_url": null,
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "DNV Cyber",
+      "website": "https://www.dnv.com/cyber/",
+      "category": "OT/IT Cybersecurity Consulting & Advisory (part of global TIC/assurance group)",
+      "hq": "H\u00f8vik, Norway (DNV Group); DNV Cyber operational hubs in Norway, Finland, Sweden, Denmark, Netherlands, Germany",
+      "industry_emphasis": "Maritime, energy (oil & gas, power, renewables), critical infrastructure, healthcare, manufacturing",
+      "company_size_band": "500+ (DNV Cyber division); DNV Group overall is much larger (tens of thousands)",
+      "revenue_band": null,
+      "confidence": "unknown",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "DNV Cyber is a dedicated IT/OT cybersecurity services arm formed from the 2024 merger of Nixu, Applied Risk, and DNV's own cyber unit, explicitly focused on securing critical infrastructure. Their global team of more than 500 experts brings over 30 years of IT and OT security experience, and they offer OT-specific services including penetration testing, risk assessments, and IEC 62443-aligned assessments.",
+      "growth_signals": "DNV recently acquired CyberOwl to strengthen maritime cybersecurity, and DNV Cyber has significant ambitions to rapidly grow its Cyber Security unit in the coming years, building on strengths in the Nordics for global impact.",
+      "outreach_strategy": "Target via DNV's dedicated careers portal (jobs.dnv.com and careers.nixu.com) and LinkedIn; engage with DNV Cyber's energy/maritime industry leads and highlight IEC 62443 / NIS2 compliance expertise given DNV's strong regulatory advisory angle.",
+      "target_executive_titles": [
+        "Head of Sales Industrial & OT Cybersecurity",
+        "Head of Cyber Security Maritime",
+        "VP OT/ICS Security Services",
+        "Director Industrial Cybersecurity"
+      ],
+      "linkedin_search_keywords": [
+        "DNV Cyber OT security",
+        "DNV Cyber industrial control systems",
+        "DNV Cyber IEC 62443",
+        "Nixu Applied Risk DNV cyber",
+        "DNV maritime cybersecurity"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "DNV maintains active job postings for OT/cyber security consultants across multiple regions (e.g., Singapore Senior OT Cyber Security Consultant listing, DNV Maritime Cyber Security Control System Engineer roles), and DNV Cyber has significant ambitions to rapidly grow its Cyber Security unit in the coming years.",
+      "priority_score": 9,
+      "source_url": "https://www.dnv.com/cyber/about/our-story/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Kudelski Security",
+      "website": "https://kudelskisecurity.com/",
+      "category": "Cybersecurity consulting/MDR/advisory (division of publicly listed Kudelski Group)",
+      "hq": "Cheseaux-sur-Lausanne, Switzerland (2nd HQ Phoenix, Arizona, USA)",
+      "industry_emphasis": "Manufacturing, critical infrastructure, industrial/cyber-physical systems, enterprise & public sector",
+      "company_size_band": "Parent Kudelski Group ~1,600-1,850 employees; Kudelski Security is a division, exact headcount not separately disclosed",
+      "revenue_band": null,
+      "confidence": "public-company (see EDGAR/SIX filings - Kudelski SA trades on SIX Swiss Exchange, ticker KUD)",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Kudelski Security offers a purpose-built MDR for OT, providing 24\u00d77 detection, analysis, and response to threats within OT systems like PLCs, SCADA, and sensor networks. Its Cyber Fusion Centers integrate Claroty industrial cybersecurity technology, and the company also lists dedicated OT Security Assessment and CPS Security Assessment advisory offerings, plus a Third-Party Risk Management (OT) service.",
+      "growth_signals": "Kudelski Security has been recognized 3x as a Leading Provider in the Forrester Wave for Managed Detection and Response (2021-2025) and 6x as a Representative Vendor in Gartner's Market Guide for Digital Forensics and Incident Response Retainer Services, indicating sustained analyst-recognized growth in its MDR/OT security line.",
+      "outreach_strategy": "Engage through Kudelski Security's OT & CPS practice pages and LinkedIn; target the OT/CPS security management and advisory groups; leverage Kudelski's Claroty partnership and Cyber Fusion Center staffing needs as an entry point for OT-focused advisory roles.",
+      "target_executive_titles": [
+        "Director OT & CPS Security",
+        "VP Managed Detection and Response",
+        "Head of Industrial Cybersecurity Advisory",
+        "Practice Lead OT Security Assessment"
+      ],
+      "linkedin_search_keywords": [
+        "Kudelski Security OT",
+        "Kudelski Security MDR industrial",
+        "Kudelski Cyber Fusion Center OT",
+        "Kudelski Security CPS",
+        "Kudelski Security Claroty"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "No specific current OT/cyber job postings were surfaced in this search; company site emphasizes active MDR/OT service offerings but explicit open requisitions were not confirmed at research time.",
+      "priority_score": 8,
+      "source_url": "https://kudelskisecurity.com/solutions/by-need/secure-ot-ics-networks/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "exida, LLC",
+      "website": "https://www.exida.com/",
+      "category": "Functional Safety & IACS Cybersecurity Consulting/Certification",
+      "hq": "Sellersville, Pennsylvania, USA (also offices in Germany, Canada, Mexico, UK, Ireland, UAE, South Africa, Italy)",
+      "industry_emphasis": "Process industry (chemical, oil & gas), automotive, machinery, energy, pharmaceuticals, medical devices, railway",
+      "company_size_band": "51-200 employees (estimate; some sources report ~100-250)",
+      "revenue_band": "$10M-$30M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "exida is an industrial control system (ICS) and SCADA system security consulting and certification firm that focuses on the unique requirements of industrial automation and process control systems based on the ISA/IEC-62443 standard. The firm combines deep functional safety expertise (IEC 61508/61511) with IACS cybersecurity consulting, assessment, and certification services, serving Fortune 500 to small companies across chemical, oil & gas, power, and automotive sectors.",
+      "growth_signals": "exida continues to expand its cybersecurity training and certification offerings (e.g., exSILentia Cyber software updates for IEC 62443-3-2 risk assessments) and hosts recurring international symposiums on functional safety and cybersecurity, suggesting steady niche-market growth rather than rapid scaling.",
+      "outreach_strategy": "Approach via exida's direct careers/consulting contact channels and LinkedIn given its small, specialized consultant base; target functional safety + cybersecurity dual-expertise practitioners; leverage exida's IEC 62443/IEC 61508 certification body reputation as a talking point for OT advisory engagements.",
+      "target_executive_titles": [
+        "Director IACS Cybersecurity",
+        "VP Functional Safety & Cybersecurity Services",
+        "Principal Consultant OT Security",
+        "Practice Lead ISA/IEC 62443"
+      ],
+      "linkedin_search_keywords": [
+        "exida IACS cybersecurity",
+        "exida IEC 62443",
+        "exida functional safety consultant",
+        "exida OT security",
+        "exida CFSE"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "Third-party data (ZoomInfo) referenced an office move affecting about 12 employees, but no specific current open OT/cyber roles were confirmed via this search; company size suggests infrequent but specialized hiring.",
+      "priority_score": 7,
+      "source_url": "https://www.exida.com/ICS-Cybersecurity/Resources",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Armexa",
+      "website": "https://armexa.com/",
+      "category": "OT/ICS Cybersecurity Consulting & Services Boutique",
+      "hq": "Houston, TX",
+      "industry_emphasis": "Oil & gas, LNG, chemicals, pipelines, power/utilities, manufacturing, building automation, healthcare",
+      "company_size_band": "~30-50 employees (estimate)",
+      "revenue_band": "$5M-$25M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Armexa is a boutique, pure-play industrial cybersecurity firm. <cite index=\"2-11\">Established in 2021 and headquartered in Houston, with 30+ OT cybersecurity engineers and consultants, industry-recognized leaders with a rich history of expertise in industrial IT/OT and cybersecurity.</cite> <cite index=\"2-12,2-13\">The firm provides full-spectrum OT security services, from governance and program development to system design, implementation & ongoing support, with decades of hands-on experience in critical infrastructure facilities such as chemical plants, refineries, pipelines, manufacturing, and offshore facilities.</cite> It's a strong target for an OT security consulting/advisory job seeker given its asset-owner-mentality consulting model.",
+      "growth_signals": "Recently expanded via a formal channel/services partnership: <cite index=\"10-1,10-2\">Global automation company Emerson and Armexa announced a strategic collaboration to offer customers using Emerson's DeltaV automation platform, a global suite of advanced OT cybersecurity services, giving DeltaV customers a single, authorized cybersecurity services provider.</cite> The firm also touts deep penetration into the LNG sector: <cite index=\"8-2\">Armexa's team has secured OT environments at 5 of the 9 US LNG export terminal complexes that collectively represent over 80% of America's operational LNG export capacity, and every LNG operator Armexa has worked with has returned for additional engagements.</cite>",
+      "outreach_strategy": "Approach via warm intro referencing the Emerson/DeltaV and TXOne partnerships and LNG/pipeline TSA compliance practice; position around specific verticals (LNG, midstream oil & gas, chemicals) where Armexa has public case studies. Small firm \u2014 direct outreach to leadership team likely most effective.",
+      "target_executive_titles": [
+        "VP OT Cybersecurity Services",
+        "Director Industrial Cybersecurity",
+        "Principal Consultant OT/ICS Security",
+        "Practice Lead OT Security"
+      ],
+      "linkedin_search_keywords": [
+        "Armexa OT cybersecurity",
+        "Armexa Houston industrial cyber",
+        "Armexa ICS consultant",
+        "Armexa CyberHAZOP"
+      ],
+      "currently_hiring_signal": "Unclear",
+      "currently_hiring_detail": "Armexa maintains an active careers page inviting applications across cybersecurity, engineering, and OT/ICS disciplines, but no specific current open-role count was found via search.",
+      "priority_score": 8,
+      "source_url": "https://armexa.com/about-us/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "GRIMM Cyber (SMFS, Inc.)",
+      "website": "https://grimmcyber.com/",
+      "category": "Cybersecurity R&D / OT-ICS-Embedded Security Consultancy",
+      "hq": "Arlington/Stafford County, VA (also operates a CyPhy R&D lab/facility in Cedar Springs, MI)",
+      "industry_emphasis": "Defense/DoD, automotive, aerospace, manufacturing, energy, critical infrastructure, embedded/IoT systems",
+      "company_size_band": "~11-50 employees (estimate)",
+      "revenue_band": "~$3M-$10M (estimate)",
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "GRIMM (legal entity SMFS, Inc.) is a specialized cyber-physical/OT security research and consulting firm. <cite index=\"12-1,12-3,12-4,12-5\">GRIMM is an advanced cybersecurity and mission engineering company specializing in Industrial Control Systems (ICS), Operational Technology (OT), embedded platforms, offensive security, and high-consequence mission systems, helping government and commercial customers identify vulnerabilities, strengthen resilience, and develop strategic advantage, combining hands-on engineering expertise with real-world understanding to solve problems where traditional IT security firms fall short.</cite> Its heavy involvement in ICS Village and vulnerability research on control systems makes it a strong niche fit for an OT cyber advisory job seeker.",
+      "growth_signals": "GRIMM has been expanding OT-focused partnerships: <cite index=\"13-9,13-10\">GRIMM Cyber and TXOne Networks announced a partnership uniting GRIMM's cybersecurity expertise with TXOne's OT security solutions, chosen under the guidance of a Senior VP with 32 years in the field for TXOne's ability to simplify OT security while minimizing downtime.</cite> It also announced physical footprint growth: <cite index=\"40-2,40-6\">GRIMM announced plans to invest $435,000 to open a new headquarters location in Stafford County, VA, and to hire approximately 23 new employees following completion of its new corporate headquarters.</cite>",
+      "outreach_strategy": "Target via its OT/ICS and automotive/embedded practice leads; reference GRIMM's ICS Village and TXOne partnership as talking points. Given small headcount, direct outreach to practice leadership (SVP-level) rather than HR is likely more effective.",
+      "target_executive_titles": [
+        "SVP CyPhy/OT Security",
+        "Director ICS Vulnerability Research",
+        "Principal OT/Embedded Security Consultant",
+        "VP Government/Commercial Cyber Services"
+      ],
+      "linkedin_search_keywords": [
+        "GRIMM Cyber OT",
+        "GRIMM SMFS ICS",
+        "GRIMM CyPhy security",
+        "GRIMM Cyber vulnerability research"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "GRIMM's own site states an active hiring posture: <cite index=\"20-7,20-8\">\"We are hiring! See our Careers Page for open positions.\"</cite> though internship program was noted closed as of a 2024 snapshot.",
+      "priority_score": 6,
+      "source_url": "https://grimmcyber.com/careers/",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Fortress Information Security",
+      "website": "https://www.fortressinfosec.com/",
+      "category": "Cyber Supply Chain Risk Management (C-SCRM) / TPRM Platform & Services",
+      "hq": "Orlando, FL",
+      "industry_emphasis": "Energy & utilities, critical manufacturing, U.S. federal government/DoD, OT/IT/IoT supply chains",
+      "company_size_band": "Private company; size not verifiable via SEC filings (estimate: 150-400 employees based on scale of platform/funding)",
+      "revenue_band": null,
+      "confidence": "estimate",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Fortress is a well-funded, high-profile player squarely at the intersection of OT security and supply chain risk. <cite index=\"23-19,23-20\">Fortress Information Security is a cybersecurity company specializing in cyber supply chain risk management (C-SCRM) for critical infrastructure organizations and U.S. government agencies, with an AI-powered Fortress Platform enabling enterprises to identify, prioritize, assess, resolve, and continuously monitor risks across vendors, software, and hardware supply chains.</cite> <cite index=\"23-16,23-17\">Fortress serves energy and utility companies, oil and gas operators, critical manufacturers, U.S. federal government agencies, and DoD contractors subject to NERC CIP, CMMC, and other critical infrastructure security regulations, with deep specialization in critical infrastructure and defense supply chain security.</cite>",
+      "growth_signals": "Fortress has raised significant capital and expanded federal reach: <cite index=\"29-1,29-2\">Fortress Information Security announced raising $125 million from Goldman Sachs, having previously raised roughly $40 million in several funding rounds between 2015 and 2020.</cite> <cite index=\"29-13\">The solution was developed in collaboration with electric utilities and the company claims it's now being used to secure 40% of the United States' power grid.</cite> It continues to add partnerships, e.g., aligning with NetRise on firmware/SBOM analysis, and was recently recognized industry-wide: <cite index=\"51-3\">Fortress was named Most Innovative Critical Infrastructure Platform by The Hacker News Cybersecurity Stars Awards 2026.</cite>",
+      "outreach_strategy": "Engage through its government/energy delivery and C-SCRM practice leadership; reference NAESAD/A2V data exchanges and DoD/Navy delivery work (e.g., Patuxent River SBOM analyst roles) as entry points. Active recruiting pipeline makes direct application plus LinkedIn networking with delivery/engineering leads a viable dual approach.",
+      "target_executive_titles": [
+        "VP Government Delivery",
+        "Director C-SCRM Services",
+        "VP Product Security",
+        "Director OT/ICS Supply Chain Risk"
+      ],
+      "linkedin_search_keywords": [
+        "Fortress Information Security OT",
+        "Fortress C-SCRM",
+        "Fortress NAESAD",
+        "Fortress Information Security supply chain"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Multiple job boards confirm active hiring: <cite index=\"52-2\">Fortress Information Security is currently hiring for 15 open positions in the United States</cite> per Glassdoor, and <cite index=\"56-2\">ZipRecruiter has 22 Fortress Information Security jobs</cite> listed, including government-delivery/SBOM analyst roles requiring active clearances.",
+      "priority_score": 9,
+      "source_url": "https://www.fortressinfosec.com/careers/jobs-listing",
+      "discovery_source": "AI research (verify)"
+    },
+    {
+      "company": "Honeywell International Inc. (Honeywell OT Cybersecurity)",
+      "website": "https://www.honeywell.com/us/en/company/ot-cybersecurity",
+      "category": "OEM/Industrial Automation Vendor with Dedicated OT Cybersecurity Practice",
+      "hq": "Charlotte, North Carolina, USA",
+      "industry_emphasis": "Cross-sector critical infrastructure (energy, chemicals, water, manufacturing, transportation, building automation) \u2014 Honeywell markets its OT cybersecurity practice across all 16 CISA-designated critical infrastructure sectors",
+      "company_size_band": "Large multinational (100,000+ employees, public company)",
+      "revenue_band": null,
+      "confidence": "public-company (see EDGAR)",
+      "ot_ics_relevance": "High",
+      "cybersecurity_relevance": "High",
+      "why_this_company_fits": "Honeywell operates a dedicated, large-scale OT cybersecurity business line with 20+ years of industrial cybersecurity consulting history. Honeywell offers over 30 OT cybersecurity services designed to help customers protect continuous operations, and its team has helped hundreds of industrial companies improve OT network and asset protection over the last 20 years. It was also named a leader in the first Omdia OT Managed Cybersecurity Services report, reflecting deep market credibility for advisory/consulting talent.",
+      "growth_signals": "Honeywell is actively expanding its OT cybersecurity product/service portfolio: it recently launched Honeywell Cyber Proactive Defense and an OT Security Operations Center at its 2025 Honeywell Users Group event, and published a 2025 Cyber Threat Report noting ransomware attacks targeting industrial operators jumped 46% in Q1 2025. It also runs an ongoing OT Cybersecurity Symposium series (e.g., a Dec. 2025 event in Ontario, Canada) to engage customers on cybersecurity strategy, and is investing in AI-enabled OT threat detection and post-quantum cryptography readiness content \u2014 all signals of a growing, well-funded OT security business unit.",
+      "outreach_strategy": "Target Honeywell Building Automation, Honeywell Connected Enterprise (HCE), and Honeywell Process Solutions cybersecurity teams directly, since OT security roles are distributed across these business units rather than a single centralized group. Reference specific Honeywell offerings (Cyber Insights, Cyber Proactive Defense, AMIR, SMX) in outreach to demonstrate familiarity with their product/service stack. Engage via LinkedIn with people posting about the Honeywell Cyber Threat Report or HUG conference sessions, and consider attending/networking at Honeywell's OT Cybersecurity Symposium events.",
+      "target_executive_titles": [
+        "VP/Director OT Cybersecurity",
+        "Global Director Cybersecurity Sales",
+        "Director Product Cyber Security",
+        "Enterprise OT Cybersecurity Leader",
+        "Director Cybersecurity Consulting Services",
+        "Sr. Director, Product Cyber Security (Chief Product Security Leader)"
+      ],
+      "linkedin_search_keywords": [
+        "Honeywell OT Cybersecurity",
+        "Honeywell Cyber Insights",
+        "Honeywell Advanced Monitoring Incident Response",
+        "Honeywell Cybersecurity Consulting",
+        "Honeywell Connected Enterprise Security",
+        "Honeywell Building Automation OT Security"
+      ],
+      "currently_hiring_signal": "Yes",
+      "currently_hiring_detail": "Active OT/cybersecurity-related job postings found across multiple boards, including a Senior Cyber Security Specialist (OT Security) role in the Netherlands within Honeywell Building Automation, Senior/Lead Cyber Security Architect/Engineer roles (Atlanta, Charlotte, Morris Plains), Enterprise OT Cybersecurity Leader (Houston), Global Director Cybersecurity Sales (Atlanta), and Senior Advanced Cloud Security Architect for Honeywell Connected Enterprise. Glassdoor shows 21 open positions and LinkedIn lists hundreds of cybersecurity-tagged roles company-wide as of research date.",
+      "priority_score": 9,
+      "source_url": "https://www.honeywell.com/us/en/company/ot-cybersecurity",
+      "discovery_source": "AI research (verify)"
+    }
+  ]
+}
