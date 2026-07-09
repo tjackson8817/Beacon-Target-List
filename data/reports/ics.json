@@ -1,0 +1,41 @@
+{
+  "list_name": "ICS",
+  "seed_company": "accenture",
+  "seed_website": "accenture.com",
+  "industry_keywords": "OT Cybersecurity",
+  "geography": "USA",
+  "primary_naics": [
+    {
+      "code": "541512",
+      "description": ""
+    },
+    {
+      "code": "541611",
+      "description": ""
+    },
+    {
+      "code": "541618",
+      "description": ""
+    },
+    {
+      "code": "541690",
+      "description": ""
+    },
+    {
+      "code": "541330",
+      "description": ""
+    },
+    {
+      "code": "541519",
+      "description": ""
+    },
+    {
+      "code": "541513",
+      "description": ""
+    }
+  ],
+  "secondary_naics": [],
+  "naics_rationale": "",
+  "generated_date": "2026-07-09T13:28:27.528431+00:00",
+  "companies": []
+}
