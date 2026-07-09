@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beacon — OT Career Target List Builder</title>
+<style>
+  :root {
+    --bg: #f5f6f4; --surface: #ffffff; --surface-2: #eef0ed;
+    --ink: #1c2124; --ink-soft: #565f5f; --ink-mute: #8a928f; --border: #dcdfda;
+    --accent: #1f4b5c; --accent-soft: #e4edef;
+    --high: #2e6b46; --high-bg: #e8f2ea;
+    --medium: #a4650a; --medium-bg: #faf0e0;
+    --low: #5f6864; --low-bg: #eceeec;
+    --mono: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.5; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+
+  .masthead { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 1rem; }
+  .wordmark h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin: 0; font-family: Georgia, "Times New Roman", serif; }
+  .wordmark span.tag { font-size: 13px; color: var(--ink-soft); font-family: var(--mono); display: block; margin-top: 2px; }
+
+  .fence { display: flex; gap: 3px; margin: 1rem 0 1.75rem; height: 14px; align-items: flex-end; }
+  .fence span { width: 3px; background: var(--accent); opacity: 0.35; }
+  .fence span:nth-child(4n) { height: 14px; opacity: 0.7; }
+  .fence span:not(:nth-child(4n)) { height: 8px; }
+
+  .picker-row { display: flex; gap: 10px; align-items: center; margin-bottom: 1.75rem; flex-wrap: wrap; }
+  select { font-size: 14px; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-family: var(--sans); min-width: 280px; }
+  .btn { font-size: 13px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+  .btn.secondary { background: var(--surface); color: var(--accent); }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.5rem; margin-bottom: 1.25rem; }
+  .card h2 { font-size: 16px; margin: 0 0 4px; }
+  .card .sub { font-size: 13px; color: var(--ink-mute); margin: 0 0 1rem; }
+
+  .naics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 780px) { .naics-grid { grid-template-columns: 1fr; } }
+  .naics-chip { display: inline-block; font-family: var(--mono); font-size: 12px; background: var(--surface-2); padding: 3px 9px; border-radius: 6px; margin: 2px 4px 2px 0; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .03em; color: var(--ink-mute); font-weight: 600; white-space: nowrap; }
+  td.num { text-align: center; font-family: var(--mono); }
+
+  .badge { font-size: 10.5px; padding: 2px 8px; border-radius: 6px; font-weight: 600; white-space: nowrap; }
+  .badge.high { background: var(--high-bg); color: var(--high); }
+  .badge.medium { background: var(--medium-bg); color: var(--medium); }
+  .badge.low { background: var(--low-bg); color: var(--low); }
+  .badge.conf-verified { background: var(--high-bg); color: var(--high); }
+  .badge.conf-estimate { background: var(--medium-bg); color: var(--medium); }
+  .badge.conf-unknown { background: var(--low-bg); color: var(--low); }
+
+  .empty { text-align: center; padding: 3rem 1rem; color: var(--ink-mute); font-size: 14px; }
+  footer.note { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 12px; color: var(--ink-mute); }
+  footer.note code { font-family: var(--mono); background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
+
+  @media print { .picker-row, .btn { display: none !important; } body { background: #fff; } .card { border: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="wordmark">
+      <h1>Beacon</h1>
+      <span class="tag">OT career target-list builder</span>
+    </div>
+  </div>
+  <div class="fence" id="fence"></div>
+
+  <div class="picker-row">
+    <select id="listPicker" onchange="loadSelectedList()">
+      <option value="">Loading lists…</option>
+    </select>
+    <a class="btn" id="downloadFormatted" href="#" style="text-decoration:none;">Download formatted .xlsx</a>
+    <button class="btn secondary" onclick="exportXLSX()">Quick export (browser, respects removed rows)</button>
+    <button class="btn secondary" onclick="window.print()">Print / save as PDF</button>
+  </div>
+
+  <div id="listView">
+    <div class="empty">No list selected yet.</div>
+  </div>
+
+  <footer class="note">
+    Public-company data (HQ, SIC) is verified via SEC EDGAR where noted. Everything else — revenue bands for
+    private companies, industry fit, growth signals, outreach strategy — is AI-assisted research and should be
+    verified before use, the same convention used in the original workbook this tool is based on.
+    <strong>Target executive fields are role titles and search keywords only</strong> — no named individuals or
+    scraped contact data are collected. To build a new list, run the <code>Build Target Company List</code>
+    GitHub Action — see README.
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+let currentReport = null;
+let removedCompanies = new Set();
+
+function renderFence() {
+  document.getElementById("fence").innerHTML = Array.from({length: 48}).map(() => "<span></span>").join("");
+}
+
+async function loadManifest() {
+  const picker = document.getElementById("listPicker");
+  let manifest = [];
+  try {
+    const res = await fetch("data/reports/manifest.json", { cache: "no-store" });
+    manifest = await res.json();
+  } catch (e) { manifest = []; }
+
+  if (!manifest.length) {
+    picker.innerHTML = `<option value="">No lists yet — run the GitHub Action to build one</option>`;
+    return;
+  }
+  picker.innerHTML = manifest.map(m =>
+    `<option value="${m.slug}">${m.list_name} — ${new Date(m.generated_date).toLocaleDateString()} (${m.total_companies} companies)</option>`
+  ).join("");
+  loadSelectedList();
+}
+
+async function loadSelectedList() {
+  const slug = document.getElementById("listPicker").value;
+  const dlLink = document.getElementById("downloadFormatted");
+  if (!slug) {
+    document.getElementById("listView").innerHTML = `<div class="empty">No list selected yet.</div>`;
+    currentReport = null;
+    dlLink.href = "#";
+    return;
+  }
+  dlLink.href = `data/reports/${slug}.xlsx`;
+  dlLink.setAttribute("download", `${slug}.xlsx`);
+  try {
+    const res = await fetch(`data/reports/${slug}.json`, { cache: "no-store" });
+    currentReport = await res.json();
+    removedCompanies = new Set();
+    renderList(currentReport);
+  } catch (e) {
+    document.getElementById("listView").innerHTML = `<div class="empty">Couldn't load that list.</div>`;
+  }
+}
+
+function relevanceBadge(val) {
+  const cls = (val || "").toLowerCase();
+  return `<span class="badge ${cls === 'high' ? 'high' : cls === 'medium' ? 'medium' : 'low'}">${val || "—"}</span>`;
+}
+
+function confidenceBadge(val) {
+  if (!val) return `<span class="badge conf-unknown">unknown</span>`;
+  if (val.startsWith("public-company")) return `<span class="badge conf-verified">SEC-verified</span>`;
+  if (val === "estimate") return `<span class="badge conf-estimate">estimate</span>`;
+  return `<span class="badge conf-unknown">${val}</span>`;
+}
+
+function renderList(report) {
+  const naicsChips = (arr) => (arr || []).map(n =>
+    `<span class="naics-chip">${n.code}${n.description ? " — " + n.description : ""}${n.relationship ? " (" + n.relationship + ")" : ""}</span>`
+  ).join(" ");
+
+  const rows = (report.companies || []).map((c, idx) => {
+    const isRemoved = removedCompanies.has(idx);
+    return `
+    <tr style="${isRemoved ? 'opacity:.4;' : ''}">
+      <td>
+        <button class="btn secondary" style="padding:2px 8px; font-size:11px;" onclick="toggleRemove(${idx})">${isRemoved ? "Restore" : "Remove"}</button>
+      </td>
+      <td><strong>${c.company || ""}</strong>${c.website ? `<br><a href="https://${c.website.replace(/^https?:\/\//,'')}" target="_blank" rel="noopener" style="font-size:11px;">${c.website}</a>` : ""}</td>
+      <td>${c.category || ""}</td>
+      <td>${c.hq || ""}</td>
+      <td>${c.industry_emphasis || ""}</td>
+      <td>${c.company_size_band || ""}</td>
+      <td>${c.revenue_band || ""}</td>
+      <td>${confidenceBadge(c.confidence)}</td>
+      <td>${relevanceBadge(c.ot_ics_relevance)}</td>
+      <td>${relevanceBadge(c.cybersecurity_relevance)}</td>
+      <td style="max-width:220px;">${c.why_this_company_fits || ""}</td>
+      <td style="max-width:180px;">${c.growth_signals || ""}</td>
+      <td style="max-width:200px;">${c.outreach_strategy || ""}</td>
+      <td>${(c.target_executive_titles || []).join("; ")}</td>
+      <td>${(c.linkedin_search_keywords || []).join("; ")}</td>
+      <td>${c.currently_hiring_signal || "—"}${c.currently_hiring_detail ? `<br><span style="color:var(--ink-mute); font-size:11px;">${c.currently_hiring_detail}</span>` : ""}</td>
+      <td class="num">${c.priority_score ?? ""}</td>
+      <td>${c.discovery_source || ""}</td>
+      <td>${c.source_url ? `<a href="${c.source_url}" target="_blank" rel="noopener">link</a>` : ""}</td>
+    </tr>`;
+  }).join("");
+
+  document.getElementById("listView").innerHTML = `
+    <div class="card">
+      <h2>${report.list_name}</h2>
+      <p class="sub">Seed: ${report.seed_company}${report.seed_website ? " (" + report.seed_website + ")" : ""}
+        ${report.geography ? " · " + report.geography : ""} · Generated ${new Date(report.generated_date).toLocaleString()}
+        · ${(report.companies || []).length} companies</p>
+    </div>
+
+    <div class="card">
+      <h2>NAICS codes used</h2>
+      <div class="naics-grid">
+        <div>
+          <p class="sub" style="margin-bottom:6px;">Primary</p>
+          ${naicsChips(report.primary_naics)}
+        </div>
+        <div>
+          <p class="sub" style="margin-bottom:6px;">Secondary / related</p>
+          ${naicsChips(report.secondary_naics)}
+        </div>
+      </div>
+      ${report.naics_rationale ? `<p class="sub" style="margin-top:12px;">${report.naics_rationale}</p>` : ""}
+    </div>
+
+    <div class="card">
+      <h2>Target companies</h2>
+      <p class="sub">Use Remove to drop a row before doing a quick export — doesn't affect the pre-formatted .xlsx, which is fixed at build time.</p>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead><tr>
+            <th></th><th>Company</th><th>Category</th><th>HQ</th><th>Industry Emphasis</th><th>Size</th><th>Revenue Band</th>
+            <th>Confidence</th><th>OT/ICS</th><th>Cyber</th><th>Why Fits</th><th>Growth Signals</th>
+            <th>Outreach Strategy</th><th>Target Titles</th><th>LinkedIn Keywords</th><th>Currently Hiring</th><th>Priority</th>
+            <th>Source</th><th>Link</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function toggleRemove(idx) {
+  if (removedCompanies.has(idx)) removedCompanies.delete(idx);
+  else removedCompanies.add(idx);
+  renderList(currentReport);
+}
+
+function exportXLSX() {
+  if (!currentReport) { alert("Select a list first."); return; }
+  const companies = (currentReport.companies || [])
+    .filter((c, idx) => !removedCompanies.has(idx))
+    .map(c => ({
+    "Company": c.company || "", "Website": c.website || "", "Category": c.category || "",
+    "HQ": c.hq || "", "Industry Emphasis": c.industry_emphasis || "", "Company Size": c.company_size_band || "",
+    "Revenue Band": c.revenue_band || "", "Confidence": c.confidence || "",
+    "OT/ICS Relevance": c.ot_ics_relevance || "", "Cybersecurity Relevance": c.cybersecurity_relevance || "",
+    "Why This Company Fits": c.why_this_company_fits || "", "Growth Signals": c.growth_signals || "",
+    "Outreach Strategy": c.outreach_strategy || "",
+    "Target Executive Titles": (c.target_executive_titles || []).join("; "),
+    "LinkedIn Search Keywords": (c.linkedin_search_keywords || []).join("; "),
+    "Currently Hiring": c.currently_hiring_signal || "", "Hiring Detail": c.currently_hiring_detail || "",
+    "Priority Score": c.priority_score ?? "", "Discovery Source": c.discovery_source || "",
+    "Source URL": c.source_url || "", "Status": "Not Started", "Contact Name": "", "Notes": ""
+  }));
+  const naics = [...(currentReport.primary_naics || []).map(n => ({...n, type: "Primary"})),
+                 ...(currentReport.secondary_naics || []).map(n => ({...n, type: "Secondary"}))]
+    .map(n => ({"NAICS Code": n.code, "Description": n.description || "", "Type": n.type, "Relationship": n.relationship || ""}));
+
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(companies), "Target Companies");
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(naics), "NAICS Codes");
+  const meta = [{"List Name": currentReport.list_name, "Seed Company": currentReport.seed_company,
+                 "Geography": currentReport.geography || "", "Generated": currentReport.generated_date}];
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(meta), "Search Info");
+
+  const slug = (currentReport.list_name || "target-list").toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  XLSX.writeFile(wb, `${slug}.xlsx`);
+}
+
+renderFence();
+loadManifest();
+</script>
+</body>
+</html>
