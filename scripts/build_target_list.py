@@ -174,15 +174,21 @@ def call_claude(system, user_content, max_tokens=3000, use_web_search=True):
     try:
         return json.loads(text)
     except json.JSONDecodeError as exc:
-        for open_c, close_c in [("{", "}"), ("[", "]")]:
+        last_exc = exc
+        for open_c, close_c in [("[", "]"), ("{", "}")]:
             start, end = text.find(open_c), text.rfind(close_c)
             if start != -1 and end != -1 and end > start:
                 try:
                     return json.loads(text[start:end + 1])
-                except json.JSONDecodeError:
+                except json.JSONDecodeError as inner_exc:
+                    last_exc = inner_exc
                     continue
-        snippet = text[:400].replace("\n", " ")
-        raise ValueError(f"{exc} -- raw response started with: {snippet!r}") from exc
+        head = text[:250].replace("\n", " ")
+        tail = text[-250:].replace("\n", " ")
+        raise ValueError(
+            f"{last_exc} -- response length {len(text)} chars. "
+            f"Started with: {head!r} ... ended with: {tail!r}"
+        ) from last_exc
 
 
 def naics_to_sic(code):
@@ -356,8 +362,26 @@ def enrich_batch(companies_batch, context_naics, context_keywords):
         f"Context — relevant NAICS codes: {', '.join(context_naics)}. Keywords: {context_keywords or '(none)'}.\n\n"
         f"Enrich these companies: {', '.join(names)}"
     )
-    result = call_claude(SYSTEM_ENRICHMENT, user_content, max_tokens=4000)
+    result = call_claude(SYSTEM_ENRICHMENT, user_content, max_tokens=8000)
     return result if isinstance(result, list) else []
+
+
+def minimal_record(company, note):
+    """Used when enrichment fails or a company gets dropped from a batch
+    response — keeps the company in the final list with a clear note,
+    rather than silently losing research that already happened."""
+    return {
+        "company": company.get("company", ""), "website": company.get("website"),
+        "category": None, "hq": None, "industry_emphasis": None,
+        "company_size_band": None, "revenue_band": None, "confidence": "unknown",
+        "ot_ics_relevance": None, "cybersecurity_relevance": None,
+        "why_this_company_fits": note,
+        "growth_signals": None, "outreach_strategy": None,
+        "target_executive_titles": [], "linkedin_search_keywords": [],
+        "currently_hiring_signal": None, "currently_hiring_detail": None,
+        "priority_score": None, "source_url": None,
+        "discovery_source": company.get("source", "unknown"),
+    }
 
 
 def edgar_company_facts(cik):
@@ -582,15 +606,22 @@ def main():
 
         print("Step 4: Enriching companies (batched)...")
         enriched = []
-        batch_size = 5
+        batch_size = 3
         for i in range(0, len(combined), batch_size):
             batch = combined[i:i + batch_size]
             print(f"  Enriching batch {i // batch_size + 1} ({len(batch)} companies)...")
             try:
                 batch_result = enrich_batch(batch, all_codes, industry_keywords)
             except Exception as exc:
-                print(f"  Batch failed: {exc}", file=sys.stderr)
+                print(f"  Batch failed, keeping company names without full enrichment: {exc}", file=sys.stderr)
+                for c in batch:
+                    enriched.append(minimal_record(
+                        c, "Enrichment failed for this batch (likely a truncated AI response). "
+                           "This company was found via research but details weren't populated — re-run to try again."
+                    ))
                 continue
+
+            matched_names = set()
             for item in batch_result:
                 source_match = next((c for c in batch if c["company"].lower() in item.get("company", "").lower()
                                       or item.get("company", "").lower() in c["company"].lower()), {})
@@ -602,6 +633,15 @@ def main():
                         item["sic_verified"] = verified.get("sic")
                 item["discovery_source"] = source_match.get("source", "unknown")
                 enriched.append(item)
+                if source_match.get("company"):
+                    matched_names.add(source_match["company"])
+
+            for c in batch:
+                if c["company"] not in matched_names:
+                    enriched.append(minimal_record(
+                        c, "This company wasn't included in the enrichment response — found via research "
+                           "but details weren't populated. Re-run to try again."
+                    ))
 
     report = {
         "list_name": list_name,
